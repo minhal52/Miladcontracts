@@ -92,3 +92,31 @@ p {
     margin: 0;
 }
 
+
+/* For smaller screens (e.g., mobile phones) */
+@media only screen and (max-width: 600px) {
+    .logo {
+        max-width: 200px; /* Adjust size for smaller screens */
+        height: auto;
+        margin-bottom: 8px;
+        margin-top: 10px;
+    }
+
+    .background-image {
+        max-width: 100%; /* Adjust the size as needed */
+        height: auto;
+    }
+
+    .container {
+        margin-top: 8px;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
