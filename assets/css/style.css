@@ -96,8 +96,8 @@ p {
 /* For smaller screens (e.g., mobile phones) */
 @media only screen and (max-width: 600px) {
     .logo {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         max-width: 200px; /* Adjust size for smaller screens */
         height: auto;
         margin-bottom: 100px;
@@ -112,12 +112,12 @@ p {
     .container {
         margin-top: 50px; /* Adjusted margin-top */
         /* padding: 20px; Adjust padding for smaller screens */
-        padding-bottom: -50px;
+      
     }
 
     h1 {
         font-size: 1em; /* Adjust font size for smaller screens */
-        margin-top: -20px; /* Adjust margin-top to move h1 content higher */
+        margin-top: -80px; /* Adjust margin-top to move h1 content higher */
     }
 
     p {
