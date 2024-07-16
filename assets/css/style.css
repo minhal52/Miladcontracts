@@ -110,8 +110,8 @@ p {
     }
 
     .container {
-        margin-top: 50px;
-        padding: 20px; /* Adjust padding for smaller screens */
+        margin-top: 150px;
+        /* padding: 20px; Adjust padding for smaller screens */
     }
 
     h1 {
