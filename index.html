@@ -1,22 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Under Construction</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--=============== FAVICON ===============-->
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Milad constructors</title>
 </head>
+<style>
+    .nav-logo-img{
+        height: 60px;
+        width: 60px;
+        mix-blend-mode: multiply;
+        
+            }
+        </style>
 <body>
-    <div class="logo-container">
-        <img src="assets/images/miladlogo.jpg" alt="Logo" class="logo">
-    </div>
-    <div class="background-image-container">
-        <img src="assets/images/new1.jpg" alt="Background" class="background-image">
-    </div>
-    <div class="container">
-        <div class="content">
-            <h1>Website Under Construction...</h1>
+    <!--==================== HEADER ====================-->
+    <!-- <header class="header" id="header"> -->
+        <nav>
+            <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo3.jpg" alt="Logo" class="logo"></a></li>
+                <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+             
+              <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+              <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+              <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
+              <li class="hideOnMobile"><a href="contact-us.html">CONTACT</a></li>
+              <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+              <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="ourservices.html">SERVICES</a></li>
+              <li><a href="contact-us.html">CONTACT</a></li>
+            </ul>
+          </nav>
+          
+          
+    <!-- </header> -->
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home-container container grid">
+                <div class="home-data">
+                    <h1 class="home-title">
+                        Efficiency and Excellence <br>converge in our Industrial process
+                    </h1>
+                    <!-- <p class="home-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore laborum suscipit dolor totam
+                        iusto aliquam
+                        ! Possimus commodi blanditiis hic minima iusto eius quis soluta explicabo ipsa? Consectetur,
+                        fugiat in.
+                    </p> -->
+                </div>
+                <div class="home-images">
+                    <div class="home-orbe">
+                        <img src="assets/img/miladworks.jpg" alt="image goes here" class="home-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== 
+          Our work counter Section Start  
+    ========================================  -->
+        <section class="section section-work-data">
+            <div class="container2 grid grid-two-column">
+                <div>
+                    
+                    <h2 class="counter-numbers" data-number="36">0+</h2>
+                    <p>Industries Served</p>
+                </div>
+                <div>
+                    <h2 class="counter-numbers" data-number="100+">0+</h2>
+                    <p>Proffesional Team</p>
+                </div>
+                <div>
+                    <h2 class="counter-numbers" data-number="10">0+</h2>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== LOGOS ====================-->
+        <!-- <section class="logos-container">
+            <div class="logos-container container grid">
+                <div class="logos-img">
+                    <img src="" alt="client logos">
+                </div>
+            </div>
+        </section> -->
+
+        <!--==================== POPULAR / services we offer====================-->
+        
+        <section class="popular section" id="popular">
+            <div class="container">
+                <span class="section-subtitle"></span>
+                <h2 class="section-title">Our Services <span>.</span></h2>
+                
+
+                <div class="popular-container swiper">
+                    <div class="swiper-wrapper">
+                        <article class="popular-card swiper-slide">
+                            <img src="assets/img/miladworks7.jpg" alt="1service" class="popular-img">
+
+                            <div class="popular-data">
+                                <h2 class="popular-detail">
+
+                                </h2>
+                                <h3 class="popular-title"></h3>
+                                <p class="popular-description">
+                                    Man Power Solutions.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="popular-card swiper-slide">
+                            <img src="assets/img/miladworks11.jpg" alt="1service" class="popular-img">
+
+                            <div class="popular-data">
+                                <h2 class="popular-detail">
+
+                                </h2>
+                                <h3 class="popular-title"></h3>
+                                <p class="popular-description">
+                                    Supply Of Fire Fighting System.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular-card swiper-slide">
+                            <img src="assets/img/miladworks13.jpg" alt="1service" class="popular-img">
+
+                            <div class="popular-data">
+                                <h2 class="popular-detail">
+
+                                </h2>
+                                <h3 class="popular-title"></h3>
+                                <p class="popular-description">
+                                    Chemical Industries & Products.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- <article class="popular-card swiper-slide">
+                            <img src="assets/img/miladworks.jpg" alt="1service" class="popular-img">
+
+                            <div class="popular-data">
+                                <h2 class="popular-detail">
+
+                                </h2>
+                                <h3 class="popular-title"></h3>
+                                <p class="popular-description">
+                                 Equipment Rental.
+                                </p>
+                            </div>
+                        </article> -->
+                        <article class="popular-card swiper-slide">
+                            <img src="assets/img/miladworks12.jpg" alt="1service" class="popular-img">
+
+                            <div class="popular-data">
+                                <h2 class="popular-detail">
+
+                                </h2>
+                                <h3 class="popular-title"></h3>
+                                <p class="popular-description">
+                                    Integrated Industrial System
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-chevron-left'></i>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== VALUE ====================-->
+        <section class="value section" id="value">
+            <div class="value-container container grid">
+                <div class="value-images">
+                    <div class="value-orbe"></div>
+                    <div class="value-img">
+                        <img src="assets/img/miladaboutimg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="value-content">
+                    <div class="value-data">
+                        <span class="section-subtitle">About Us</span>
+                        <h2 class="section-title">Unlocking Possibilities and Empowering Progress
+                            <span>.</span>
+                        </h2>
+                        <p class="value-description">Milad Constructors and Contractors is a well-established and popular 
+                            company with an excellent track record for customer satisfaction. Milad Constructors and Contractors 
+                            provides complete solutions for our customers through a wide range of products. We offer customized
+                             services and technical support to our esteemed customers. Our commitment to timely delivery,
+                              accurate inventory management, technical assistance, and information to keep our customers updated makes us the most preferred partner.
+    
+                            <!-- Milad Constructors and Contractors supplies industries and consumers around the globe with 
+                            innovative products and solutions. Despite the heavy competition that exists today, Milad 
+                            Constructors and Contractors continues to shine as a top choice. Our key strategy for success 
+                            is to exceed our customers' expectations. -->
+                            
+                            .</p>
+                    </div>
+                    <div class="value-item">
+                        <button class="button value-button"><a href="about.html">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+
+      
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact-container container grid">
+                <div class="contact-images">
+                    <div class="contact-orbe"></div>
+                    <div class="contact-img">
+                        <img src="assets/img/miladcontactimage.jpg" alt="contact">
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-data">
+                        <span class="section-subtitle">Contact Us</span>
+                        <h2 class="section-title">
+                            easy to contact us <span>.</span>
+                        </h2>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-box">
+                            <div class="contact-card-info">
+                                <i class='bx bxs-phone-call'></i>
+                                <div>
+                                    <h3 class="contact-card-title">CALL</h3><br>
+                                    <p class="contact-card-description">+966593127494</p>
+                                </div>
+                            </div>
+                            <button class="button contact-card-button">
+                                <a href="tel:+966593127494">Call now</a>
+                            </button>
+                        </div>
+                        <div class="contact-card-box">
+                            <div class="contact-card-info">
+                                <i class='bx bxs-envelope'></i>
+                                <div>
+                                    <h3 class="contact-card-title">Mail us</h3><br>
+                                    <p class="contact-card-description">@miladconstruction.com</p>
+                                </div>
+                            </div>
+                            <button class="button contact-card-button">
+                                <a href="mailto:@miladconstruction.com">Mail now</a>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <!--==================== SUBSCRIBE ====================-->
+        <section class="subscribe section">
+            <div class="subscribe-container container">
+                <form action="" class="contact-left">
+                    <h1 class="contact-left-title">
+                        Get In Touch
+                    </h1>
+                    <hr><input type="text" name="name" placeholder="your name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="your email" class="contact-inputs" required>
+                    <textarea name="message" placeholder="your message" class="contact-inputs" id=""
+                        required></textarea>
+                    <!-- <p class="subscribe-description">
+            subscribe and find....
+        </p> -->
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer-container container grid">
+            <div>
+                <img src="assets/img/Miladcompanylogo3.jpg" alt="Milad Logo" class="footer-logo">
+                <p class="footer-description">
+                    <i class='bx bxs-map'></i>Asma Bint Malik Street, <br>Al Arid Dist. Riyad, KSA
+                </p>
+            </div>
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-title">Quick links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">HOME</a></li>
+                        <li><a href="about.html" class="footer-link">ABOUT</a></li>
+                        <li><a href="ourservices.html" class="footer-link">SERVICE</a></li>
+                        <li><a href="contact-us.html" class="footer-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Follow us</h3>
+                    <ul class="footer-social">
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-facebook-circle'></i></a></li>
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-instagram-alt'></i></a></li>
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-whatsapp'></i></a></li>
+                        <!-- <li><a href="" class="footer-social-link"><i class='bx bxl-email'></i></a></li> -->
+
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="footer-info-container">
+            <span class="footer-copy">
+                &#169; Milad. All rights reserved.
+            </span>
+        </div>
+    </footer>
+    
+    
+
+
+    <!--========== SCROLL UP ==========-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

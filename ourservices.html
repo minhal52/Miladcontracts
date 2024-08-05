@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Milad constructors</title>
+</head>
+<style>
+   /* Ensure Swiper container has a defined height */
+.swiper-container {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+}
+
+/* Style the pagination dots */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Adjust bottom spacing as needed */
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(0,0,0,0.5); /* Adjust color */
+    width: 12px; /* Adjust size */
+    height: 12px; /* Adjust size */
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff; /* Adjust active color */
+}
+.service-service-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    padding: 1rem 2rem;
+    background-color: #007aff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.value-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+}
+
+.value-orbe {
+    width: 300px;
+    height: 300px;
+    background-color: hsl(228, 24%, 97%);
+    border-radius: 16px; /* Make the corners less rounded for a square design */
+    position: absolute; /* Ensure the orbe is in the background */
+    z-index: 1;
+}
+
+.value-img {
+    position: relative; /* Adjusted to relative to be centered within .value-images */
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px; /* Make the corners less rounded for a square design */
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+    z-index: 2; /* Ensure the image is above the orbe */
+}
+
+.value-description {
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+.contact-container {
+    row-gap: 3rem;
+}
+
+.contact-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+}
+
+.contact-orbe {
+    width: 300px;
+    height: 300px;
+    background-color: hsl(228, 24%, 97%);
+    border-radius: 16px; /* Make the corners less rounded for a square design */
+    position: absolute; /* Ensure the orbe is in the background */
+    z-index: 1;
+}
+
+.contact-img {
+    position: relative; /* Adjusted to relative to be centered within .contact-images */
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px; /* Make the corners less rounded for a square design */
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+    z-index: 2; /* Ensure the image is above the orbe */
+}
+
+.contact-description {
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+
+</style>
+<body>
+    <!--==================== HEADER ====================-->
+    <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="ourservices.html">SERVICES</a></li>
+          <li><a href="contact-us.html">CONTACT</a></li>
+           <!-- theme change button -->
+       
+        </ul>
+        <ul>
+          <li><a href="#"><img src="assets/img/Miladcompanylogo3.jpg" alt="Logo" class="logo"></a></li>
+          <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+          <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+          <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
+          <li class="hideOnMobile"><a href="contact-us.html">CONTACT</a></li>
+          <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+
+  
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <section class="service-service-hero-section">
+          <video id="hero-video" class="hero-video" controls>
+    <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
+</video>
+
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Milad Constructors</h1>
+                <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
+                <a href="#services" class="hero-button">Explore Our Services</a>
+            </div>
+        </section>
+        
+        <section class="popular section" id="popular">
+            <div class="container">
+                <span class="section-subtitle"></span>
+                <h2 class="section-title">Our Services <span>.</span></h2>
+                <section class="value section" id="value">
+                    <div class="value-container container grid">
+                        <div class="value-images">
+                            <div class="value-orbe"></div>
+                            <div class="value-img">
+                                <img src="assets/img/miladworks13.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="value-content">
+                            <div class="value-data">
+                                <span class="section-subtitle"></span>
+                                <h2 class="section-title">Chemicals & Industrial Products
+                                    <span>.</span>
+                                </h2>
+                                <p class="value-description">Our mission is to be the regional leader in providing chemical distribution solutions to our suppliers and customers in the safest and most efficient and cost effective means.
+
+                                    Our Values AL FAIM is committed to developing innovative solutions and to provide cost-effective quality service with integrity and excellence.
+                                    
+                                    Safety First Health and Safety are at the core of all our operations and initiatives.
+                                    
+                                    Responsible Distribution AL FAIM is committed to applying the highest industry standards in all aspects of operations and activities , ensuring the safe handling, storage and distribution of chemical products from manufacturer’s sites to the customer’s door.
+                                    
+                                    Raw Materials for Water & process Treatment Drilling Chemicals Construction Chemicals First Fills for Oil & Gas Project.
+                                </p>
+                            </div>
+                </section>
+        </section>
+        <!-- <section class="gallery">
+            <h3>Gallery</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
+                    </div>
+                </div>
+        </section> -->
+        <section class="section section-work-data">
+           
+        </section>
+   <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact-container container grid">
+                <div class="contact-images">
+                    <div class="contact-orbe"></div>
+
+                    <div class="contact-img">
+                        <img src="assets/img/miladworkequipment.jpg" alt="contact">
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-data">
+                        <span class="section-subtitle"></span>
+                        <h2 class="section-title">
+                           
+                            Heavy Equipment Rental <span>.</span>
+                        </h2>
+                        <p class="contact-description">
+                            AL FAIM Equipment Rental, is the new source for landscape construction equipment rental conveniently paired with the leader home improvement products and is located in major cities all around the Kingdom of Saudi Arabia.
+
+                            We are your top-of-the-line construction equipment rental company looking to help you save time and cut back on your workforce. We offer a large selection of construction equipment rental tools. If you have any equipment rental tool questions, feel free to ask us and we will help you find the right rental equipment for your project.
+                            
+                            We offer a large and diverse inventory of earthmoving, construction, industrial, material handling, and heavy equipment available for rent on a daily, weekly, monthly, or yearly basis. And out competitive rates make renting affordable.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+          <!--==================== GALLERY ====================-->
+          <!-- <section class="gallery">
+            <h3>Gallery</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
+                    </div>
+                </div>
+            
+            </div>
+        </section> -->
+        <section class="value section" id="value">
+            <div class="value-container container grid">
+                <div class="value-images">
+                    <div class="value-orbe"></div>
+                    <div class="value-img">
+                        <img src="assets/img/miladworks6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="value-content">
+                    <div class="value-data">
+                        <span class="section-subtitle"></span>
+                        <h2 class="section-title">Integrated Industrial Security System
+                            <span>.</span>
+                        </h2>
+                        <p class="value-description">Milad Constructors and Contractors believe that a strong project and partner relationship with the contractor, systems integrator, or end user is fundamental to success. We therefore offer:
+
+                            A complete site survey capability for pricing, engineering support, and equipment suitability.
+                            Deployment of a comprehensive installation, equipment commissioning, and site supervisory capability when required.
+                            A comprehensive training package for both operators and administrators, combined with train-the-trainer and refresher courses.
+                            Assurance of correct utilization of equipment from day one.
+                            The ability to offer both manufacturer and in-house maintenance services.
+                            Full logistical support including shipping, customs, clearance, and delivery.
+                            Products and services that comply with HCIS where required..</p>
+                    </div>
+                </div>
+         </div>
+
+        </section>
+  <!--==================== GALLERY ====================-->
+  <!-- <section class="gallery">
+    <h3>Gallery</h3>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
+  
+</section> -->
+  <!--==================== CONTACT ====================-->
+  <section class="contact section" id="contact">
+    <div class="contact-container container grid">
+        <div class="contact-images">
+            <div class="contact-orbe"></div>
+
+            <div class="contact-img">
+                <img src="assets/img/miladworks7.jpg" alt="contact">
+            </div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-data">
+                <span class="section-subtitle"></span>
+                <h2 class="section-title">
+                   
+                    Man Power <span>.</span>
+                </h2>
+                <p class="contact-description">
+                    Long Term, Short Term, and Emergency Manpower
+                    Skilled & Unskilled Workers (from workers to managerial level)
+                 Milad Constructors and Contractors is one of the most trusted Manpower Solution Contractors in the region. We provide long-term and short-term manpower, primarily to SABIC and Saudi Aramco. We use the most efficient technology and recruitment methodology to recruit the best talents for our prestigious clients.
+                    We allow you to focus on your core business by handling your recruitment tasks. With our extensive dedicated workforce spread across the kingdom and a large database (Inspectors, Engineers, Planners, etc. from several countries as per project-specific requirements), we ensure that your manpower needs are met efficiently.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+  <!--==================== GALLERY ====================-->
+  <!-- <section class="gallery">
+    <h3>Gallery</h3>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="swiper-slide">
+                <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
+    </div>
+</section> -->
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer-container container grid">
+            <div>
+                <a href="" class="footer-logo">MILAD</a>
+                <p class="footer-description">
+                    <i class='bx bxs-map'></i>Asma Bint Malik Street, <br>Al Arid Dist.Riyad,KSA
+                </p>
+            </div>
+            <!-- <div class="footer-content">
+                <div>
+                    <h3 class="footer-title"></h3>
+                    <ul class="footer-links">
+                        <li><a href="" class="footer-link"></a></li>
+                        <li><a href="" class="footer-link"></a></li>
+                        <li><a href="" class="footer-link"></a></li>
+
+                    </ul>
+                </div> -->
+                <div class="footer-content">
+                    <div>
+                        <h3 class="footer-title">Quick links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html" class="footer-link">HOME</a></li>
+                            <li><a href="about.html" class="footer-link">ABOUT</a></li>
+                            <li><a href="ourservices.html" class="footer-link">SERVICE</a></li>
+                            <li><a href="contact-us.html" class="footer-link">CONTACT</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer-title">Follow us</h3>
+                        <ul class="footer-social">
+                            <li><a href="" class="footer-social-link"><i class='bx bxl-facebook-circle'></i></a></li>
+                            <li><a href="" class="footer-social-link"><i class='bx bxl-instagram-alt'></i></a></li>
+                            <li><a href="" class="footer-social-link"><i class='bx bxl-linkedin-square'></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+        <div class="footer-info-container">
+            <span class="footer-copy">
+                &#169;Milad . All rights reserved.
+            </span>
+            <div class="footer-privacy">
+                <a href="">Terms and Agreements</a>
+                <a href="">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--========== SCROLL UP ==========-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
