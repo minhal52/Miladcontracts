@@ -161,7 +161,7 @@ body.dark-theme{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  /* background-color: transparent; */
   z-index: var(--z-fixed);
   transition: .4s; /*for animation in dark mode*/
 }
@@ -214,6 +214,7 @@ nav li:first-child {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  z-index: 1;
 }
 #hideonmobile{
   display:none;
@@ -909,6 +910,7 @@ transition: .3s;
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
+
 }
 
 
@@ -955,6 +957,8 @@ height: 280px;
   .footer-content{
     gap: 2.5rem;
   }
+
+
 }
 
 
@@ -1326,18 +1330,16 @@ margin-bottom: 5px;
 
 
 /* ==================counting numbers==================== */
-
 .container2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: auto; /* This will push the container to the bottom of its parent */
 }
 
 .counter-numbers {
-  color:var(--title-color);
-  margin: 40px auto 0; 
+  color: var(--title-color);
   font-size: 40px;
   text-align: center;
 }
@@ -1350,74 +1352,220 @@ margin-bottom: 5px;
   color: var(--second-color);
 }
 
-
-@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-  /* Your CSS rules specific to iPhone 13, 14, and 15 go here */
-  /* For example, you can include styles for your container or elements */
+/* For large screens (e.g., laptops) */
+@media (min-width: 1024px) {
   .container2 {
-
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-bottom: 40px;
-      /* margin-top: 40px; This will push the container to the bottom of its parent */
- 
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
-  .counter-numbers p {
-    color:var(--second-color);
-    /* margin: 20px auto 0; Margin top added and margin bottom set to 0, auto for horizontal centering */
-    font-size: 2px;
-    /* margin-top: 80px; */
-    text-align: center;
+  .counter-numbers {
+    font-size: 50px;
   }
-  
-  
-}
- 
-.service-service-hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+
+  .container2 p {
+    font-size: 28px;
+  }
 }
 
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/* For medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container2 {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .counter-numbers {
+    font-size: 45px;
+  }
+
+  .container2 p {
+    font-size: 26px;
+  }
+}
+
+/* For small screens (e.g., mobile phones) */
+@media (max-width: 767px) {
+  .container2 {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .counter-numbers {
+    font-size: 35px;
+  }
+
+  .container2 p {
+    font-size: 22px;
+  }
+}
+
+/* Specific for iPhone 13, 14, and 15 */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .container2 {
+    flex-direction: column;
+    /* margin-bottom: 0px; */
+  }
+
+  .counter-numbers {
+    font-size: 30px;
+  }
+
+  .container2 p {
+    font-size: 20px;
+  }
+}
+
+/* service */
+
+.service-detail-section {
+  padding: 2rem 0;
+}
+
+.service-detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.service-detail-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-detail-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 1rem;
   object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+.service-detail-content {
+  flex: 2;
+  min-width: 300px;
+  color:var(--text-color);
 }
 
-.hero-title {
-  font-size: 3rem;
+.service-detail-title {
+  font-size: var(--font-medium);
   margin-bottom: 1rem;
+  color: var(--title-color);
 }
 
-.hero-description {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.service-detail-description {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-.hero-button {
-  padding: 1rem 2rem;
-  background-color: #007aff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .service-detail-title {
+    font-size: 1.75rem;
+  }
+
+  .service-detail-description {
+    font-size: 1.125rem;
+  }
+
+  .service-detail-button {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
 }
 
+@media (max-width: 768px) {
+  .service-detail-container {
+    flex-direction: column;
+  }
+
+  .service-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .service-detail-description {
+    font-size: 1rem;
+  }
+
+  .service-detail-button {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.service-detail-section {
+  padding: 2rem 0;
+}
+
+.service-detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.service-detail-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.service-detail-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
+.service-detail-description {
+  font-size: var(--smaller-font-size);
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.service-detail-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .service-detail-title {
+    font-size: var(--font-medium);
+  }
+
+  .service-detail-description {
+    font-size: var(--font-medium);
+  }
+
+}
+
+@media (max-width: 768px) {
+  .service-detail-container {
+    flex-direction: column;
+  }
+
+  .service-detail-title {
+    font-size: var(--font-medium);
+  }
+
+  .service-detail-description {
+    font-size: var(--smaller-font-size);
+    align-items: center;
+  }
+
+
+}

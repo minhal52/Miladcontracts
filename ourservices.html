@@ -90,71 +90,51 @@
     border-radius: 5px;
     font-size: 1rem;
 }
-.value-images {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center the content vertically */
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+    }
+
+    .hero-button {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.5rem;
+    }
 }
 
-.value-orbe {
-    width: 300px;
-    height: 300px;
-    background-color: hsl(228, 24%, 97%);
-    border-radius: 16px; /* Make the corners less rounded for a square design */
-    position: absolute; /* Ensure the orbe is in the background */
-    z-index: 1;
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
-.value-img {
-    position: relative; /* Adjusted to relative to be centered within .value-images */
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 12px; /* Make the corners less rounded for a square design */
-    /* margin: auto; */
-    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
-    z-index: 2; /* Ensure the image is above the orbe */
-}
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
 
-.value-description {
-    font-size: var(--small-font-size);
-    /* margin-bottom: 2rem; */
-}
-.contact-container {
-    row-gap: 3rem;
-}
+    .hero-description {
+        font-size: 0.875rem;
+    }
 
-.contact-images {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center the content vertically */
-}
-
-.contact-orbe {
-    width: 300px;
-    height: 300px;
-    background-color: hsl(228, 24%, 97%);
-    border-radius: 16px; /* Make the corners less rounded for a square design */
-    position: absolute; /* Ensure the orbe is in the background */
-    z-index: 1;
-}
-
-.contact-img {
-    position: relative; /* Adjusted to relative to be centered within .contact-images */
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 12px; /* Make the corners less rounded for a square design */
-    /* margin: auto; */
-    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
-    z-index: 2; /* Ensure the image is above the orbe */
-}
-
-.contact-description {
-    font-size: var(--small-font-size);
-    /* margin-bottom: 2rem; */
+    .hero-button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 
@@ -185,296 +165,133 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <section class="service-service-hero-section">
-          <video id="hero-video" class="hero-video" controls>
-    <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
-</video>
-
+            <video id="hero-video" class="hero-video" autoplay>
+                <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
+            </video>
+            
+        
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to Milad Constructors</h1>
                 <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
-                <a href="#" class="hero-button">Explore Our Services</a>
+                <a href="#service" class="hero-button">Explore Our Services</a>
             </div>
         </section>
         
-        <section class="popular section" id="popular">
-            <div class="container">
-                <span class="section-subtitle"></span>
-                <h2 class="section-title">Our Services <span>.</span></h2>
-                <section class="value section" id="value">
-                    <div class="value-container container grid">
-                        <div class="value-images">
-                            <div class="value-orbe"></div>
-                            <div class="value-img">
-                                <img src="assets/img/miladworks13.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="value-content">
-                            <div class="value-data">
-                                <span class="section-subtitle"></span>
-                                <h2 class="section-title">Chemicals & Industrial Products
-                                    <span>.</span>
-                                </h2>
-                                <p class="value-description">Our mission is to be the regional leader in providing chemical distribution solutions to our suppliers and customers in the safest and most efficient and cost effective means.
+        
+<!-- our service -->
+<section class="service-detail-section" id="service">
+    <div class="service-detail-container">
+      <div class="service-detail-image">
+        <img src="assets/img/miladworks13.jpg" alt="Service Detail Image">
+      </div>
+      <div class="service-detail-content">
+        <h2 class="service-detail-title">Chemicals & Industrial Products</h2>
+        <p class="service-detail-description">Our mission is to be the regional leader in providing chemical distribution solutions to our suppliers and customers in the safest and most efficient and cost effective means.
+    
+            Our Values Milad Constructors is committed to developing innovative solutions and to provide cost-effective quality service with integrity and excellence.
+    
+            Safety First Health and Safety are at the core of all our operations and initiatives.
+    
+            Responsible Distribution Milad Constructors is committed to applying the highest industry standards in all aspects of operations and activities, ensuring the safe handling, storage and distribution of chemical products from manufacturer’s sites to the customer’s door.
+    
+            Raw Materials for Water & Process Treatment Drilling Chemicals Construction Chemicals First Fills for Oil & Gas Project.</p>
+    </div>
+    
+    </div>
+  </section>
+  <section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Heavy Equipment Rental</h2>
+            <p class="service-detail-description">Milad Constructors Equipment Rental is the new source for landscape construction equipment rental conveniently paired with the leader home improvement products and is located in major cities all around the Kingdom of Saudi Arabia.
 
-                                    Our Values AL FAIM is committed to developing innovative solutions and to provide cost-effective quality service with integrity and excellence.
-                                    
-                                    Safety First Health and Safety are at the core of all our operations and initiatives.
-                                    
-                                    Responsible Distribution AL FAIM is committed to applying the highest industry standards in all aspects of operations and activities , ensuring the safe handling, storage and distribution of chemical products from manufacturer’s sites to the customer’s door.
-                                    
-                                    Raw Materials for Water & process Treatment Drilling Chemicals Construction Chemicals First Fills for Oil & Gas Project.
-                                </p>
-                            </div>
-                </section>
-        </section>
-        <!-- <section class="gallery">
-            <h3>Gallery</h3>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
-                    </div>
-                </div>
-        </section> -->
-        <section class="section section-work-data">
-           
-        </section>
-   <!--==================== CONTACT ====================-->
-        <section class="contact section" id="contact">
-            <div class="contact-container container grid">
-                <div class="contact-images">
-                    <div class="contact-orbe"></div>
+                We are your top-of-the-line construction equipment rental company looking to help you save time and cut back on your workforce. We offer a large selection of construction equipment rental tools. If you have any equipment rental tool questions, feel free to ask us and we will help you find the right rental equipment for your project.
 
-                    <div class="contact-img">
-                        <img src="assets/img/miladworkequipment.jpg" alt="contact">
-                    </div>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-data">
-                        <span class="section-subtitle"></span>
-                        <h2 class="section-title">
-                           
-                            Heavy Equipment Rental <span>.</span>
-                        </h2>
-                        <p class="contact-description">
-                            AL FAIM Equipment Rental, is the new source for landscape construction equipment rental conveniently paired with the leader home improvement products and is located in major cities all around the Kingdom of Saudi Arabia.
-
-                            We are your top-of-the-line construction equipment rental company looking to help you save time and cut back on your workforce. We offer a large selection of construction equipment rental tools. If you have any equipment rental tool questions, feel free to ask us and we will help you find the right rental equipment for your project.
-                            
-                            We offer a large and diverse inventory of earthmoving, construction, industrial, material handling, and heavy equipment available for rent on a daily, weekly, monthly, or yearly basis. And out competitive rates make renting affordable.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </section>
-          <!--==================== GALLERY ====================-->
-          <!-- <section class="gallery">
-            <h3>Gallery</h3>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
-                    </div>
-                </div>
-            
-            </div>
-        </section> -->
-        <section class="value section" id="value">
-            <div class="value-container container grid">
-                <div class="value-images">
-                    <div class="value-orbe"></div>
-                    <div class="value-img">
-                        <img src="assets/img/miladworks6.jpg" alt="">
-                    </div>
-                </div>
-                <div class="value-content">
-                    <div class="value-data">
-                        <span class="section-subtitle"></span>
-                        <h2 class="section-title">Integrated Industrial Security System
-                            <span>.</span>
-                        </h2>
-                        <p class="value-description">Milad Constructors and Contractors believe that a strong project and partner relationship with the contractor, systems integrator, or end user is fundamental to success. We therefore offer:
-
-                            A complete site survey capability for pricing, engineering support, and equipment suitability.
-                            Deployment of a comprehensive installation, equipment commissioning, and site supervisory capability when required.
-                            A comprehensive training package for both operators and administrators, combined with train-the-trainer and refresher courses.
-                            Assurance of correct utilization of equipment from day one.
-                            The ability to offer both manufacturer and in-house maintenance services.
-                            Full logistical support including shipping, customs, clearance, and delivery.
-                            Products and services that comply with HCIS where required..</p>
-                    </div>
-                </div>
-         </div>
-
-        </section>
-  <!--==================== GALLERY ====================-->
-  <!-- <section class="gallery">
-    <h3>Gallery</h3>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
-            </div>
+                We offer a large and diverse inventory of earthmoving, construction, industrial, material handling, and heavy equipment available for rent on a daily, weekly, monthly, or yearly basis. And our competitive rates make renting affordable.</p>
         </div>
-  
-</section> -->
-  <!--==================== CONTACT ====================-->
-  <section class="contact section" id="contact">
-    <div class="contact-container container grid">
-        <div class="contact-images">
-            <div class="contact-orbe"></div>
-
-            <div class="contact-img">
-                <img src="assets/img/miladworks7.jpg" alt="contact">
-            </div>
-        </div>
-        <div class="contact-content">
-            <div class="contact-data">
-                <span class="section-subtitle"></span>
-                <h2 class="section-title">
-                   
-                    Man Power <span>.</span>
-                </h2>
-                <p class="contact-description">
-                    Long Term, Short Term, and Emergency Manpower
-                    Skilled & Unskilled Workers (from workers to managerial level)
-                 Milad Constructors and Contractors is one of the most trusted Manpower Solution Contractors in the region. We provide long-term and short-term manpower, primarily to SABIC and Saudi Aramco. We use the most efficient technology and recruitment methodology to recruit the best talents for our prestigious clients.
-                    We allow you to focus on your core business by handling your recruitment tasks. With our extensive dedicated workforce spread across the kingdom and a large database (Inspectors, Engineers, Planners, etc. from several countries as per project-specific requirements), we ensure that your manpower needs are met efficiently.
-                </p>
-            </div>
-
+        <div class="service-detail-image">
+            <img src="assets/img/miladworkequipment.jpg" alt="Service Detail Image">
         </div>
     </div>
-
-
 </section>
-  <!--==================== GALLERY ====================-->
-  <!-- <section class="gallery">
-    <h3>Gallery</h3>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image1.jpg" alt="Gallery Image 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image2.jpg" alt="Gallery Image 2">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image3.jpg" alt="Gallery Image 3">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image4.jpg" alt="Gallery Image 4">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image5.jpg" alt="Gallery Image 5">
-            </div>
-            <div class="swiper-slide">
-                <img src="path/to/gallery/image6.jpg" alt="Gallery Image 6">
-            </div>
+
+  
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-image">
+            <img src="assets/img/miladworks6.jpg" alt="Service Detail Image">
+        </div>
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Integrated Industrial Security System</h2>
+            <p class="service-detail-description">Milad Constructors and Contractors believe that a strong project and partner relationship with the contractor, systems integrator, or end user is fundamental to success. We therefore offer:
+
+                A complete site survey capability for pricing, engineering support, and equipment suitability.
+                Deployment of a comprehensive installation, equipment commissioning, and site supervisory capability when required.
+                A comprehensive training package for both operators and administrators, combined with train-the-trainer and refresher courses.
+                Assurance of correct utilization of equipment from day one.
+                The ability to offer both manufacturer and in-house maintenance services.
+                Full logistical support including shipping, customs, clearance, and delivery.
+                Products and services that comply with HCIS where required.</p>
         </div>
     </div>
-</section> -->
+</section>
+
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Man Power</h2>
+            <p class="service-detail-description">Long Term, Short Term, and Emergency Manpower
+                Skilled & Unskilled Workers (from workers to managerial level)
+                Milad Constructors and Contractors is one of the most trusted Manpower Solution Contractors
+                in the region. We provide long-term and short-term manpower, primarily to SABIC and Saudi Aramco. We
+                use the most efficient technology and recruitment methodology to recruit the best talents for our prestigious clients.
+                We allow you to focus on your core business by handling your recruitment tasks. With our extensive dedicated workforce spread across
+                the kingdom and a large database (Inspectors, Engineers, Planners, etc. from several countries
+                as per project-specific requirements), we ensure that your manpower needs are met efficiently.</p>
+        </div>
+        <div class="service-detail-image">
+            <img src="assets/img/miladworks7.jpg" alt="Service Detail Image">
+        </div>
+    </div>
+</section>
+
     </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
         <div class="footer-container container grid">
             <div>
-                <a href="" class="footer-logo">MILAD</a>
+                <img src="assets/img/Miladcompanylogo3.jpg" alt="Milad Logo" class="footer-logo">
                 <p class="footer-description">
-                    <i class='bx bxs-map'></i>Asma Bint Malik Street, <br>Al Arid Dist.Riyad,KSA
+                    <i class='bx bxs-map'></i>Asma Bint Malik Street, <br>Al Arid Dist. Riyad, KSA
                 </p>
             </div>
-            <!-- <div class="footer-content">
+            <div class="footer-content">
                 <div>
-                    <h3 class="footer-title"></h3>
+                    <h3 class="footer-title">Quick links</h3>
                     <ul class="footer-links">
-                        <li><a href="" class="footer-link"></a></li>
-                        <li><a href="" class="footer-link"></a></li>
-                        <li><a href="" class="footer-link"></a></li>
+                        <li><a href="index.html" class="footer-link">HOME</a></li>
+                        <li><a href="about.html" class="footer-link">ABOUT</a></li>
+                        <li><a href="ourservices.html" class="footer-link">SERVICE</a></li>
+                        <li><a href="contact-us.html" class="footer-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Follow us</h3>
+                    <ul class="footer-social">
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-facebook-circle'></i></a></li>
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-instagram-alt'></i></a></li>
+                        <li><a href="" class="footer-social-link"><i class='bx bxl-whatsapp'></i></a></li>
+                        <!-- <li><a href="" class="footer-social-link"><i class='bx bxl-email'></i></a></li> -->
 
                     </ul>
-                </div> -->
-                <div class="footer-content">
-                    <div>
-                        <h3 class="footer-title">Quick links</h3>
-                        <ul class="footer-links">
-                            <li><a href="index.html" class="footer-link">HOME</a></li>
-                            <li><a href="about.html" class="footer-link">ABOUT</a></li>
-                            <li><a href="ourservices.html" class="footer-link">SERVICE</a></li>
-                            <li><a href="contact-us.html" class="footer-link">CONTACT</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="footer-title">Follow us</h3>
-                        <ul class="footer-social">
-                            <li><a href="" class="footer-social-link"><i class='bx bxl-facebook-circle'></i></a></li>
-                            <li><a href="" class="footer-social-link"><i class='bx bxl-instagram-alt'></i></a></li>
-                            <li><a href="" class="footer-social-link"><i class='bx bxl-linkedin-square'></i></a></li>
-                        </ul>
-                    </div>
                 </div>
-                
-
             </div>
-
         </div>
         <div class="footer-info-container">
             <span class="footer-copy">
-                &#169;Milad . All rights reserved.
+                &#169; Milad. All rights reserved.
             </span>
-            <div class="footer-privacy">
-                <a href="">Terms and Agreements</a>
-                <a href="">Privacy policy</a>
-            </div>
         </div>
     </footer>
 
@@ -520,6 +337,51 @@
                 },
             },
         });
+//         document.addEventListener('DOMContentLoaded', function() {
+//     var video = document.getElementById('hero-video');
+//     if (video) {
+//         video.muted = true; // Ensure video is muted for autoplay
+//         video.play().catch(function(error) {
+//             console.log('Autoplay failed:', error);
+//             video.controls = true; // Show controls if autoplay fails
+//         });
+//     }
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('hero-video');
+    if (video) {
+        video.muted = false; // Attempt to play with sound
+
+        // Attempt to autoplay the video
+        video.play().catch(function(error) {
+            console.log('Autoplay failed:', error);
+            video.controls = true; // Show controls if autoplay fails
+
+            // Optional: Provide a UI prompt for user interaction
+            var playButton = document.createElement('button');
+            playButton.textContent = 'Play Video';
+            playButton.style.position = 'absolute';
+            playButton.style.top = '50%';
+            playButton.style.left = '50%';
+            playButton.style.transform = 'translate(-50%, -50%)';
+            playButton.style.zIndex = '1';
+            playButton.style.padding = '1rem';
+            playButton.style.backgroundColor = '#007aff';
+            playButton.style.color = 'white';
+            playButton.style.border = 'none';
+            playButton.style.borderRadius = '5px';
+            document.querySelector('.service-service-hero-section').appendChild(playButton);
+            
+            playButton.addEventListener('click', function() {
+                video.muted = false;
+                video.play();
+                playButton.style.display = 'none';
+            });
+        });
+    }
+});
+
+
     </script>
 </body>
 
