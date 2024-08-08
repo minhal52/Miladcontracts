@@ -870,7 +870,7 @@ nav li:first-child {
 .geeks img {
   width: auto;
   height: auto;
-  opacity: 0.3;
+  opacity: 2;
   pointer-events: none;
   mix-blend-mode: multiply;
   background: none;
@@ -880,7 +880,7 @@ nav li:first-child {
 @media (max-width: 600px) {
   .geeks {
     font-size: 10px; /* Smaller font size for mobile */
-    opacity: 0.50; /* Slightly increase opacity if needed */
+    opacity: 5; /* Slightly increase opacity if needed */
   }
 
   .geeks img {
