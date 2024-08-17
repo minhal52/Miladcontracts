@@ -33,6 +33,7 @@
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
+  --font-bold :800;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -132,9 +133,9 @@ body.dark-theme{
   display: grid;
 }
 
-.section {
+/* .section {
   padding: 4.5rem 0 2rem;
-}
+} */
 
 .section-title {
   font-size: var(--h2-font-size);
@@ -156,19 +157,27 @@ body.dark-theme{
 }
 
 /*=============== HEADER & NAV ===============*/
+/* Ensure the header stays fixed at the top */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: transparent; */
   z-index: var(--z-fixed);
-  transition: .4s; /*for animation in dark mode*/
+  transition: .4s;
+  /* Adjust background color if needed */
+  background-color: white;
 }
 
+/* Make the navbar sticky at the top */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Ensure the navbar is on top of other content */
 }
 
 nav ul {
@@ -177,6 +186,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 10px;
 }
 
 nav li {
@@ -204,21 +214,22 @@ nav li:first-child {
   position: fixed;
   top: 0;
   right: 0;
-  height:300px;
+  height: 300px;
   width: 470px;
   background-color: white;
-  /* backdrop-filter: blur(12px); */
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  z-index: 1;
+  z-index: 998; /* Below the navbar */
 }
-#hideonmobile{
-  display:none;
+
+#hideonmobile {
+  display: none;
 }
+
 .sidebar li {
   width: 100%;
 }
@@ -232,7 +243,7 @@ nav li:first-child {
 }
 
 .logo {
-  height: 100px; /* Adjust height as needed */
+  height: 40px; /* Adjust height as needed */
   width: auto;
   display: flex;
   align-items: center;
@@ -258,10 +269,8 @@ nav li:first-child {
 }
 
 /* Active link */
-.active-link{
-  background: linear-gradient(101deg,
-  hsl(228, 66%, 53%),
-  hsl(228, 66%, 47%));
+.active-link {
+  background: linear-gradient(101deg, hsl(228, 66%, 53%), hsl(228, 66%, 47%));
   color: #fff;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
@@ -304,7 +313,7 @@ nav li:first-child {
   background: linear-gradient(180deg,
   hsl(0, 0%, 16%)93%,
   hsl(0, 0%, 67%));
-  border-radius: 135px 135px 0px 0px;
+  /* border-radius: 135px 135px 0px 0px; */
 }
 
 .home-img{
@@ -312,13 +321,54 @@ nav li:first-child {
   width: 265px;
   height: 300px;
   overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
+  /* border-radius: 125px 125px 12px 12px; */
   display: inline-flex;
   align-items: flex-end;
   bottom: -1rem;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
+
+
+/* for large screens */
+@media screen and (min-width : 1023px){
+.home{
+  padding-bottom: 0;
+}
+.home-containefr{
+  /* padding-top: 5rem;/ */
+  column-gap: 2rem;
+}
+
+.home-data{
+  padding-bottom: 4rem;
+}
+
+.home-title{
+  margin-bottom: 2rem;
+}
+
+.home-description,
+.home-search{
+  margin-bottom: 3rem;
+}
+
+.home-values{
+  column-gap: 3.5rem;
+}
+
+.home-orbe{
+ width: 504px;
+  height: 611px;
+  border-radius: 256px 256px 0 0;
+}
+.home-img{
+  width: 498px;
+  height: 634px;
+  /* border-radius: 236px 236px 12px 12px; */
+  /* bottom: -2.5rem; */
+}
+}
 /*=============== BUTTON ===============*/
 .button{
   display: inline-block;
@@ -411,7 +461,9 @@ nav li:first-child {
 }
 
 .popular-description {
-  font-size: var(--medium-font-size);
+  /* font-size: var(--medium-font-size); */
+  font-size: 18px;
+  font-weight:var(--font-bold);
   align-items: center;
 }
 
@@ -462,7 +514,7 @@ nav li:first-child {
   width: 266px;
   height: 316px;
   background-color: hsl(228, 24%, 97%);
-  border-radius: 135px 135px 16px 16px;
+  /* border-radius: 135px 135px 16px 16px; */
   /* position: absolute; Make sure the orbe is the background */
   /* z-index: 1; */
 }
@@ -472,7 +524,7 @@ nav li:first-child {
   width: 250px;
   height: 300px;
   overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
+  /* border-radius: 125px 125px 12px 12px; */
   inset: 0;
   margin: auto;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
@@ -482,6 +534,24 @@ nav li:first-child {
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
 }
+
+@media screen and (min-width : 1023px){
+.value-orbe
+{
+height: 500px;
+width: auto;
+ /* height: 570px;border-radius: 258px 258px 16px 16px; */
+}
+
+.value-img
+{
+  height: 500px;
+  width: auto;
+ /* border-radius: 238px 238px 12px 12px; */
+}
+
+}
+
 
 /* client logos */
 .logo-grid1 {
@@ -517,6 +587,7 @@ nav li:first-child {
   font-size: var(--h2-font-size);
   text-align: center;
 }
+
 
 /* For mobile screen */
 @media only screen and (max-width: 600px) {
@@ -554,7 +625,7 @@ nav li:first-child {
   width: 266px;
   height: 316px;
   background-color: hsl(228, 24%, 97%);
-  border-radius: 135px 135px 16px 16px;
+  /* border-radius: 135px 135px 16px 16px; */
 }
 
 .contact-img {
@@ -563,7 +634,7 @@ nav li:first-child {
   height: 300px;
   /* object-fit: cover; */
   overflow: hidden;
-  border-radius: 125px 125px 12px 12px;
+  /* border-radius: 125px 125px 12px 12px; */
   inset: 0;
   margin: auto;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
@@ -641,9 +712,20 @@ nav li:first-child {
   .contact-card-box:hover {
     box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1);
   } 
+/* for large screen */
 
-
-
+  @media screen and (min-width : 1023px){
+    .contact-orbe{
+      width: 400px;
+      height: 400px;
+      /* border-radius: 258px 258px 16px 16px; */
+       }
+       .contact-img{
+        width: auto;
+      height: 500px;
+      /* border-radius: 238px 238px 12px 12px; */
+       }
+      }
 /*=============== SUBSCRIBE ===============*/
 .subscribe {
   padding: 0; /* Remove extra padding from the container */
@@ -717,7 +799,10 @@ nav li:first-child {
   
   }
   
+
+  
 /*=============== FOOTER ===============*/
+/* General styles for the footer */
 .footer-container {
   row-gap: 2.5rem;
 }
@@ -726,14 +811,11 @@ nav li:first-child {
   color: var(--first-color);
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
-  display: inline-flex;
-  align-items: center;
-  /* column-gap: .25rem; */
-  /* margin-bottom: .75rem; */
   display: block; /* Ensure the image is treated as a block element */
   width: 80px; /* Make sure the image is responsive */
   height: 80px; /* Maintain the aspect ratio */
   margin-top: -30px;
+  mix-blend-mode: multiply;
 }
 
 .footer-logo i {
@@ -815,7 +897,6 @@ nav li:first-child {
 
 .footer-info {
   padding-bottom: 6rem;
-  /* margin-top: 5.5rem; */
   flex-direction: column;
   text-align: center;
   row-gap: 1.5rem;
@@ -851,19 +932,61 @@ nav li:first-child {
 .footer-copy {
   margin-top: 1rem; /* Adjust as needed */
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer-logo {
+    margin-top: 30px; /* Adjust margin for mobile screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack footer content vertically */
+    gap: 1rem; /* Adjust gap between items */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center text inside each item */
+    margin-right: auto;
+  }
+  .footer-description {
+    text-align: center; /* Center the description text */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%; /* Optional: Limit the width for better readability */
+  }
+  .footer-links {
+    grid-template-columns: 1fr; /* Stack links vertically */
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    align-items: center;
+  }
+}
+
+
 /* ============================================================================================= */
     /* Base styles */
 .geeks {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.1; /* Adjust the opacity to make the watermark subtle */
-  font-size: 50px; /* Adjust the size as needed */
-  color: black; /* Or use an image */
-  pointer-events: none; /* Ensure it doesn't interfere with any interactions */
-  z-index: 1000; /* Ensure it is on top of other elements */
-  text-align: center;
+  transform: translate(-50%, -50%); 
+ opacity: 0.1;  /* Adjust the opacity to make the watermark subtle */
+font-size: 50px; /* Adjust the size as needed */
+ color: black;   /*Or use an image */ 
+pointer-events: none;  /*  Ensure it doesn't interfere with any interactions */
+ z-index: 1000;    /*Ensure it is on top of other elements */ 
+   text-align: center;
 }
 
 /* To use an image as a  */
@@ -1060,7 +1183,7 @@ height: 280px;
   }
 }
 
-/* For large devices */
+/* ======================For large devices================================= */
 @media screen and (min-width : 1023px){
   .section{
     padding: 7.5rem 0 1rem;
@@ -1121,42 +1244,7 @@ height: 280px;
     color: var(--first-color);
   }
 
-  .home{
-    padding-bottom: 0;
-  }
-  .home-containefr{
-    padding-top: 5rem;
-    column-gap: 2rem;
-  }
-
-  .home-data{
-    padding-bottom: 4rem;
-  }
-
-  .home-title{
-    margin-bottom: 2rem;
-  }
-
-  .home-description,
-  .home-search{
-    margin-bottom: 3rem;
-  }
-
-  .home-values{
-    column-gap: 3.5rem;
-  }
-
-  .home-orbe{
-    width: 504px;
-    height: 611px;
-    border-radius: 256px 256px 0 0;
-  }
-  .home-img{
-    width: 498px;
-    height: 634px;
-    border-radius: 236px 236px 12px 12px;
-    bottom: -2.5rem;
-  }
+ 
 
   .logos-img img{
     height: 100px;
@@ -1180,32 +1268,6 @@ height: 280px;
   column-gap: 5rem;
  }
 
- .value-orbe
- {
-  width: 481px;
-  height: 570px;border-radius: 258px 258px 16px 16px;
- }
- .contact-orbe{
-width: 300px;
-height: 300px;
-border-radius: 258px 258px 16px 16px;
- }
- .contact-img{
-  width: 300px;
-height: 300px;
-border-radius: 238px 238px 12px 12px;
- }
- .value-img
- {
-  width: 461px;
-  height: 550px;
-  border-radius: 238px 238px 12px 12px;
- }
- .value-img img,
- .contact-img img{
-  max-width: initial;
-  width: 490px;
- }
 
  .value-description,
  .contact-description{
@@ -1365,13 +1427,15 @@ margin-bottom: 5px;
 } */
 
 
-/* ==================counting numbers==================== */
+/* ==================Counting numbers==================== */
 .container2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
   margin-top: auto; /* This will push the container to the bottom of its parent */
+  margin-left: 10px; /* Optional: Set a default left margin for smaller screens */
+  margin-right: 10px; /* Optional: Set a default right margin for smaller screens */
 }
 
 .counter-numbers {
@@ -1392,6 +1456,8 @@ margin-bottom: 5px;
 @media (min-width: 1024px) {
   .container2 {
     justify-content: space-between;
+    margin-left: 40px; /* Add left margin for large screens */
+    margin-right: 40px; /* Add right margin for large screens */
     margin-bottom: 40px;
   }
 
@@ -1451,9 +1517,8 @@ margin-bottom: 5px;
     font-size: 20px;
   }
 }
-
+/* ====================================================== */
 /* service */
-
 .service-detail-section {
   padding: 2rem 0;
 }
@@ -1465,8 +1530,8 @@ margin-bottom: 5px;
   gap: 2rem;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 1200px;
   padding: 0 1rem;
+  max-width: 1200px; /* Add max-width to keep content centered and aligned */
 }
 
 .service-detail-content {
@@ -1476,25 +1541,30 @@ margin-bottom: 5px;
 }
 
 .service-detail-title {
-  font-size: var(--font-medium);
+  font-size:24px;
   margin-bottom: 1rem;
   color: var(--title-color);
 }
 
 .service-detail-description {
-  font-size: var(--smaller-font-size);
+  font-size: 14px;
   margin-bottom: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .service-detail-image {
   flex: 1;
+  height: 400px; /* Fixed height for images */
+  max-width: 100%; /* Ensure image does not exceed container width */
   min-width: 300px;
+  display: flex; /* Center image within the container */
+  align-items: center;
+  justify-content: center;
 }
 
 .service-detail-image img {
-  width: 100%;
-  height: auto;
+  width: auto; /* Maintain aspect ratio */
+  height: 100%; /* Fill the height of the container */
   border-radius: 1rem;
   object-fit: cover;
 }
@@ -1513,6 +1583,7 @@ margin-bottom: 5px;
 @media (max-width: 768px) {
   .service-detail-container {
     flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center align items */
   }
 
   .service-detail-title {
@@ -1536,6 +1607,7 @@ margin-bottom: 5px;
 
   .service-detail-image {
     order: 1; /* Ensure image comes before content */
+    height: 300px; /* Reduced height for smaller screens */
   }
 }
 
@@ -1545,7 +1617,10 @@ margin-bottom: 5px;
   }
 
   .service-detail-description {
-    font-size:var(--smaller-font-size)
+    font-size: var(--smaller-font-size);
+  }
+
+  .service-detail-image {
+    height: 200px; /* Further reduced height for very small screens */
   }
 }
-

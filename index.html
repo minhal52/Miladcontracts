@@ -20,17 +20,17 @@
     <title>Milad constructors</title>
 </head>
 <style>
-    .nav-logo-img{
+    /* .nav-logo-img{
         height: 60px;
         width: 60px;
         mix-blend-mode: multiply;
-               }
+               } */
  
  </style>
 <body>
     <!--==================== HEADER ====================-->
         <nav>
-            <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo3.jpg" alt="Logo" class="logo"></a></li>
+            <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
                 <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
              
               <li class="hideOnMobile"><a href="index.html">HOME</a></li>
@@ -61,12 +61,7 @@
                     <h1 class="home-title">
                         Efficiency and Excellence <br>converge in our Industrial process
                     </h1>
-                    <!-- <p class="home-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore laborum suscipit dolor totam
-                        iusto aliquam
-                        ! Possimus commodi blanditiis hic minima iusto eius quis soluta explicabo ipsa? Consectetur,
-                        fugiat in.
-                    </p> -->
+            
                 </div>
                 <div class="home-images">
                     <div class="home-orbe">
@@ -75,7 +70,8 @@
                 </div>
             </div>
         </section>
-
+      
+        
         <!-- ======================================== 
           Our work counter Section Start  
     ========================================  -->
@@ -226,9 +222,9 @@
                 </div>
                 <div class="contact-content">
                     <div class="contact-data">
-                        <span class="section-subtitle">Contact Us</span>
+                        <!-- <span class="section-subtitle">Contact Us</span> -->
                         <h2 class="section-title">
-                            easy to contact us <span>.</span>
+                            Contact us <span>.</span>
                         </h2>
                     </div>
                     <div class="contact-card">
@@ -269,26 +265,23 @@
 </div>
         </section>
         <!--==================== SUBSCRIBE ====================-->
-        <section class="subscribe section">
+         <section class="subscribe section">
             <div class="subscribe-container container">
-                <form action="" class="contact-left">
+                <form action="" class="contact-left" id="contact-form">
                     <h1 class="contact-left-title">
                         Get In Touch
                     </h1>
-                    <hr><input type="text" name="name" placeholder="your name" class="contact-inputs" required>
-                    <input type="email" name="email" placeholder="your email" class="contact-inputs" required>
-                    <textarea name="message" placeholder="your message" class="contact-inputs" id=""
-                        required></textarea>
-                    <!-- <p class="subscribe-description">
-            subscribe and find....
-        </p> -->
-                    <button type="submit">Send Message</button>
+                    <hr>
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" id="name" required>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" id="email" required>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs" id="message" required></textarea>
+        
+                    <button type="button" id="send-btn" disabled>Send Message</button>
                 </form>
             </div>
-
-            
-
         </section>
+        
+  
     </main>
 
     <!--==================== FOOTER ====================-->
