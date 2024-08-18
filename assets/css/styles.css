@@ -276,99 +276,70 @@ nav li:first-child {
 }
 
 /*=============== HOME ===============*/
-.home{
-  background: linear-gradient(170deg,
-  hsl(0, 0%, 22%)0%,
-  hsl(0, 0%, 6%)30%);
+.home {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 0; /* Adjust if needed */
 }
 
-.home-container{
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay color and opacity */
+  z-index: 1; /* Ensure the overlay sits above the background image */
+}
+
+.home-container {
+  position: relative;
+  z-index: 2; /* Ensure the content sits above the overlay */
   padding-top: 4rem;
   row-gap: 3.5rem;
 }
-.home-title, .home-value-number{
+
+.home-title, .home-value-number {
   color: #fff;
 }
 
-.home-title{
+.home-title {
   font-size: var(--biggest-font-size);
   line-height: 120%;
   margin-bottom: 1.25rem;
 }
 
-.home-value-description{
+.home-value-description {
   display: flex;
   color: var(--text-color-light);
   font-size: var(--smaller-font-size);
 }
 
-.home-images{
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.home-orbe{
-  width: 265px;
-  height: 284px;
-  background: linear-gradient(180deg,
-  hsl(0, 0%, 16%)93%,
-  hsl(0, 0%, 67%));
-  /* border-radius: 135px 135px 0px 0px; */
-}
+/* For large screens */
+@media screen and (min-width: 1023px) {
+  .home-container {
+      column-gap: 2rem;
+  }
 
-.home-img{
-  position: absolute;
-  width: 265px;
-  height: 300px;
-  overflow: hidden;
-  /* border-radius: 125px 125px 12px 12px; */
-  display: inline-flex;
-  align-items: flex-end;
-  bottom: -1rem;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+  .home-data {
+      padding-bottom: 4rem;
+  }
+
+  .home-title {
+      margin-bottom: 2rem;
+  }
+
+  .home-description,
+  .home-search {
+      margin-bottom: 3rem;
+  }
+
+  .home-values {
+      column-gap: 3.5rem;
+  }
 }
 
 
-
-/* for large screens */
-@media screen and (min-width : 1023px){
-.home{
-  padding-bottom: 0;
-}
-.home-containefr{
-  /* padding-top: 5rem;/ */
-  column-gap: 2rem;
-}
-
-.home-data{
-  padding-bottom: 4rem;
-}
-
-.home-title{
-  margin-bottom: 2rem;
-}
-
-.home-description,
-.home-search{
-  margin-bottom: 3rem;
-}
-
-.home-values{
-  column-gap: 3.5rem;
-}
-
-.home-orbe{
- width: 504px;
-  height: 611px;
-  border-radius: 256px 256px 0 0;
-}
-.home-img{
-  width: 498px;
-  height: 634px;
-  /* border-radius: 236px 236px 12px 12px; */
-  /* bottom: -2.5rem; */
-}
-}
 /*=============== BUTTON ===============*/
 .button{
   display: inline-block;
@@ -392,27 +363,6 @@ nav li:first-child {
   display: none;
 }
 
-/*=============== LOGOS ===============*/
-.logos-container{
-  padding-top: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-.button {
-  display: inline-block;
-  background: linear-gradient(101deg, var(--button-bg-start) var(--button-bg-end));
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: .5rem;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
-  transition: .3s;
-  cursor: pointer;
-}
-
-.button:hover {
-  box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
-}
 /*=============== POPULAR / service ===============*/
 .popular-container {
   padding: 1rem 0 5rem;
@@ -502,6 +452,7 @@ nav li:first-child {
 /*=============== VALUE / about ===============*/
 .value-container{
   row-gap: 3rem;
+  margin-top: 80px;
 }
 .value-images{
   position: relative;
@@ -511,8 +462,8 @@ nav li:first-child {
 }
 
 .value-orbe {
-  width: 266px;
-  height: 316px;
+  width: 280px;
+  height: 280px;
   background-color: hsl(228, 24%, 97%);
   /* border-radius: 135px 135px 16px 16px; */
   /* position: absolute; Make sure the orbe is the background */
@@ -521,8 +472,8 @@ nav li:first-child {
 
 .value-img {
   position: absolute;
-  width: 250px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   overflow: hidden;
   /* border-radius: 125px 125px 12px 12px; */
   inset: 0;
@@ -534,7 +485,7 @@ nav li:first-child {
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
 }
-
+/* ===============large screen================ */
 @media screen and (min-width : 1023px){
 .value-orbe
 {
@@ -611,19 +562,21 @@ width: auto;
 }
 /*=============== CONTACT ===============*/
 .contact-container {
+  margin-top: 80px;
   row-gap: 2rem;
   /* margin-top: 0; Ensure no margin above the container */
 }
 
 .contact-images {
+  
   position: relative;
   display: flex;
   justify-content: center;
 }
 
 .contact-orbe {
-  width: 266px;
-  height: 316px;
+  width: 250px;
+  height: 280px;
   background-color: hsl(228, 24%, 97%);
   /* border-radius: 135px 135px 16px 16px; */
 }
@@ -631,7 +584,7 @@ width: auto;
 .contact-img {
   position: absolute;
   width: 250px;
-  height: 300px;
+  height: 280px;
   /* object-fit: cover; */
   overflow: hidden;
   /* border-radius: 125px 125px 12px 12px; */
@@ -796,6 +749,11 @@ width: auto;
     .contact-inputs{
       width: 70vw;
     }
+    .subscribe {
+     margin-top: 30px;
+     padding: 6px;
+    }
+    
   
   }
   
@@ -952,66 +910,43 @@ width: auto;
     align-items: center; /* Center the content horizontally */
     text-align: center; /* Center text inside each item */
     margin-right: auto;
+    width: 100%; /* Ensure full width for centering */
   }
+  
   .footer-description {
     text-align: center; /* Center the description text */
     margin-left: auto;
     margin-right: auto;
     max-width: 90%; /* Optional: Limit the width for better readability */
   }
+
+  .footer-title {
+    text-align: center; /* Center the footer titles */
+    margin-bottom: 1rem; /* Optional: Add space below the title */
+  }
+
   .footer-links {
-    grid-template-columns: 1fr; /* Stack links vertically */
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display 2 items per row */
+    gap: 10px; /* Add space between the links */
+    justify-items: center; /* Center the links within their grid cells */
+    justify-content: center; /* Center the grid within its container */
+    width: 100%; /* Ensure the grid takes up the full width of its container */
   }
   
   .footer-social {
     display: flex;
     justify-content: center; /* Center social icons */
     align-items: center;
+    width: 100%; /* Ensure social icons container takes up the full width */
+    gap: 10px; /* Optional: Add some space between the social icons */
+    margin-top: 1rem; /* Optional: Add space above the social links */
   }
 }
 
 
 /* ============================================================================================= */
     /* Base styles */
-.geeks {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
- opacity: 0.1;  /* Adjust the opacity to make the watermark subtle */
-font-size: 50px; /* Adjust the size as needed */
- color: black;   /*Or use an image */ 
-pointer-events: none;  /*  Ensure it doesn't interfere with any interactions */
- z-index: 1000;    /*Ensure it is on top of other elements */ 
-   text-align: center;
-}
-
-/* To use an image as a  */
-.geeks img {
-  width: auto;
-  height: auto;
-  opacity: 2;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  background: none;
-}
-
-/* Mobile screens adjustment */
-@media (max-width: 600px) {
-  .geeks {
-    font-size: 10px; /* Smaller font size for mobile */
-    opacity: 0.50; /* Slightly increase opacity if needed */
-  }
-
-  .geeks img {
-    width: 70%; /* Adjust the size of the image for mobile */
-    height: auto;
-  }
-}
-
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
   width: .6rem;
@@ -1357,76 +1292,6 @@ height: 280px;
 }
 
 
-
-/* contact form */
-
-/* .contact-container{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content:space-evenly;
-}
-.contact-left{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
- 
-}
-.contact-left-title h1{
-font-weight: 600;
-font-size: 40px;
-margin-bottom: 5px;
-}
-
-.contact-left-title hr{
-  border: none;
-  width: 120px;
-  height: 5px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.contact-inputs{
-  width: 400px;
-  height: 50px;
-  border: none;
-  outline: none;
-  padding-left: 25px;
-  font-weight: 500;
-  border-radius: 50px;
-  color: #666;
-
-}
-.contact-left textarea{
-  height: 140px;
-  padding-top: 15px;
-  border-radius: 20px;
-}
-.contact-inputs::placeholder{
-  color: #999;
-}
-.contact-left button{
-  display: flex;
-  align-items: center;
-  padding: 15px 30px;
-  font-size: 16px;
-  color: #fff;
-  gap: 10px;
-  border: none;
-  border-radius: 50px;
-  background: blue;
-}
-
-
-@media(max-width:800px){
-  .contact-inputs{
-    width: 70vw;
-  }
-
-} */
-
-
 /* ==================Counting numbers==================== */
 .container2 {
   display: flex;
@@ -1490,7 +1355,8 @@ margin-bottom: 5px;
 @media (max-width: 767px) {
   .container2 {
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    margin-top: 30px;
   }
 
   .counter-numbers {
