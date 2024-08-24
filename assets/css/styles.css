@@ -1490,3 +1490,18 @@ height: 280px;
     height: 200px; /* Further reduced height for very small screens */
   }
 }
+
+
+/* service ksa */
+
+.services-ksa {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;}
+
+
+.services-ksa-title {
+  font-size: 2rem;
+  color:var(--second-color);
+  margin-bottom: 10px;
+}

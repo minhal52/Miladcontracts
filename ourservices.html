@@ -136,8 +136,40 @@
         padding: 0.5rem 1rem;
     }
 }
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
 
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
+.play-button svg {
+    fill: white;
+}
+.volume-slider {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    z-index: 3;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
 </style>
 <body>
     <!--==================== HEADER ====================-->
@@ -164,27 +196,46 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <section class="service-service-hero-section">
-            <video id="hero-video" class="hero-video" autoplay>
+            <video id="hero-video" class="hero-video" muted>
                 <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
             </video>
             
-        
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to Milad Constructors</h1>
                 <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
                 <a href="#service" class="hero-button">Explore Our Services</a>
             </div>
+        
+            <!-- Play button -->
+            <div id="play-button" class="play-button">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5v14l11-7z"></path>
+                </svg>
+            </div>
+        
+            <!-- Volume control -->
+            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
         </section>
         
         
+        
 <!-- our service -->
+ <!-- Subheading for Services in Saudi Arabia -->
+<section class="services-ksa">
+    <div class="services-ksa-content">
+        <h2 class="services-ksa-title">Services Offered in Saudi Arabia.</h2>
+        <!-- <p class="services-ksa-description">We proudly offer our services across the Kingdom of Saudi Arabia, ensuring excellence in every project.</p> -->
+    </div>
+</section>
 <section class="service-detail-section" id="service">
     <div class="service-detail-container">
       <div class="service-detail-image">
         <img src="assets/img/miladworks13.jpg" alt="Service Detail Image">
       </div>
       <div class="service-detail-content">
-        <h2 class="service-detail-title">Chemicals & Industrial Products</h2>
+        <h2 class="service-detail-title">Storage of Tanks & Logistics Services.
+
+        </h2>
         <p class="service-detail-description">Our mission is to be the regional leader in providing chemical distribution solutions to our suppliers and customers in the safest and most efficient and cost effective means.
     
             Our Values Milad Constructors is committed to developing innovative solutions and to provide cost-effective quality service with integrity and excellence.
@@ -218,25 +269,8 @@
 <section class="service-detail-section">
     <div class="service-detail-container">
         <div class="service-detail-image">
-            <img src="assets/img/miladworks6.jpg" alt="Service Detail Image">
+            <img src="assets/img/Manpowerimg.jpg" alt="Service Detail Image">
         </div>
-        <div class="service-detail-content">
-            <h2 class="service-detail-title">Integrated Industrial Security System</h2>
-            <p class="service-detail-description">Milad Constructors and Contractors believe that a strong project and partner relationship with the contractor, systems integrator, or end user is fundamental to success. We therefore offer:
-
-                A complete site survey capability for pricing, engineering support, and equipment suitability.
-                Deployment of a comprehensive installation, equipment commissioning, and site supervisory capability when required.
-                A comprehensive training package for both operators and administrators, combined with train-the-trainer and refresher courses.
-                Assurance of correct utilization of equipment from day one.
-                The ability to offer both manufacturer and in-house maintenance services.
-                Full logistical support including shipping, customs, clearance, and delivery.
-                Products and services that comply with HCIS where required.</p>
-        </div>
-    </div>
-</section>
-
-<section class="service-detail-section">
-    <div class="service-detail-container">
         <div class="service-detail-content">
             <h2 class="service-detail-title">Man Power</h2>
             <p class="service-detail-description">Long Term, Short Term, and Emergency Manpower
@@ -248,8 +282,181 @@
                 the kingdom and a large database (Inspectors, Engineers, Planners, etc. from several countries
                 as per project-specific requirements), we ensure that your manpower needs are met efficiently.</p>
         </div>
+    </div>
+</section>
+
+
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Integrated Industrial Security System</h2>
+            <p class="service-detail-description">>Milad Constructors and Contractors believe that a strong project and partner relationship with the contractor, systems integrator, or end user is fundamental to success. We therefore offer:
+   A complete site survey capability for pricing, engineering support, and equipment suitability.
+                Deployment of a comprehensive installation, equipment commissioning, and site supervisory capability when required.
+                A comprehensive training package for both operators and administrators, combined with train-the-trainer and refresher courses.
+                Assurance of correct utilization of equipment from day one.
+                The ability to offer both manufacturer and in-house maintenance services.
+                Full logistical support including shipping, customs, clearance, and delivery.
+                Products and services that comply with HCIS where required.</p>
+        </div>
         <div class="service-detail-image">
-            <img src="assets/img/miladworks7.jpg" alt="Service Detail Image">
+            <img src="assets/img/miladworks6.jpg" alt="Service Detail Image">
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================================================================================== -->
+<!-- ===========================UAE=============================================== -->
+<section class="services-ksa">
+    <div class="services-ksa-content">
+        <h2 class="services-ksa-title">Services Offered in UAE.</h2>
+        <!-- <p class="services-ksa-description">We proudly offer our services across UAE, ensuring excellence in every project.</p> -->
+    </div>
+</section>
+<section class="service-detail-section" id="service">
+    <div class="service-detail-container">
+      <div class="service-detail-image">
+        <img src="assets/img/SteelConstruction.jpg" alt="Service Detail Image">
+      </div>
+      <div class="service-detail-content">
+        <h2 class="service-detail-title">Steel Constructions Contracting.            .
+
+        </h2>
+        <p class="service-detail-description">At Steel Constructions Contracting, we specialize in delivering high-quality steel structure solutions tailored to meet the unique needs of our clients. We bring fresh energy and 
+            innovation to the construction industry, focusing on precision, safety, and efficiency. 
+            Our services range from design and fabrication to installation and maintenance of steel structures,
+             ensuring durability and excellence in every project. With a commitment to superior craftsmanship and customer 
+             satisfaction, we aim to build strong, lasting partnerships with our clients.</p>
+    </div>
+    
+    </div>
+  </section>
+  <section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Sewage and Drainage Contracting  </h2>
+            <p class="service-detail-description">Sewage and Drainage Contracting provides expert solutions in the design,
+                 installation, and maintenance of sewage and drainage systems. We are dedicated to delivering efficient and
+                  environmentally responsible infrastructure, ensuring the seamless management of water resources. With a focus on precision, safety, and regulatory compliance, our team is committed to excellence in every project. 
+                  By offering reliable and innovative services, we strive to build long-term relationships 
+                with our clients and contribute to the sustainable development of our communities.</p>
+        </div>
+        <div class="service-detail-image">
+            <img src="assets/img/sewagecontract.jpg" alt="Service Detail Image">
+        </div>
+    </div>
+</section>
+
+  
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-image">
+            <img src="assets/img/serveyengineeringservice.jpg" alt="Service Detail Image">
+        </div>
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Survey Engineering Services. </h2>
+            <p class="service-detail-description">Survey Engineering Services offers precise and comprehensive surveying 
+                solutions for a wide range of projects. Our expertise spans topographical surveys, boundary assessments,
+                 construction staking, and more, ensuring accurate data collection and analysis. With a commitment to 
+                 utilizing the latest technology and adhering to industry standards, we provide our clients with reliable 
+                 information to support informed decision-making. Our focus on accuracy, efficiency, and professionalism 
+                 allows us to deliver results that meet the highest expectations,
+                fostering trust and long-term partnerships with our clients.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Technical Services Works </h2>
+            <p class="service-detail-description">>Technical Services Works specializes in providing a broad 
+                range of technical solutions to support the seamless operation and maintenance of facilities.
+                 Our services include electrical, plumbing, HVAC, and general maintenance, ensuring that every
+                  aspect of your infrastructure operates efficiently and reliably. With a focus on quality workmanship,
+                   safety, and timely service, our team is dedicated to meeting the specific needs of each client. 
+                   We pride ourselves on delivering tailored solutions that enhance the functionality and longevity of your assets, 
+                fostering long-lasting relationships built on trust and excellence.</p>
+        </div>
+        <div class="service-detail-image">
+            <img src="assets/img/technicalworks.jpg" alt="Service Detail Image">
+        </div>
+    </div>
+</section>
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-image">
+            <img src="assets/img/buildingcontracting.jpg" alt="Service Detail Image">
+        </div>
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Building Contracting  </h2>
+            <p class="service-detail-description">Building Contracting delivers expert construction
+                 services across residential, commercial, and industrial projects. We are committed 
+                 to excellence in every phase of the building process, from initial design to final handover. 
+                 Our team focuses on quality craftsmanship, adherence to timelines, and stringent safety standards,
+                  ensuring that each project is completed to the highest specifications. With a dedication to client 
+                  satisfaction, we build lasting structures and relationships, 
+                contributing to the success of every project we undertake.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Electromechanical Contracting
+            </h2>
+            <p class="service-detail-description">Electromechanical Contracting specializes in delivering integrated 
+                solutions for electrical, mechanical, and plumbing systems in various construction projects.
+                 Our services encompass design, installation, and maintenance, ensuring the efficient and reliable 
+                 operation of all electromechanical systems. With a focus on innovation, quality, and compliance with 
+                 industry standards, our team is dedicated to providing tailored solutions that meet the unique needs of 
+                 each project. We pride ourselves on our technical expertise and commitment to excellence, building strong 
+                 partnerships with our clients through consistent,
+                 high-quality service..</p>
+        </div>
+        <div class="service-detail-image">
+            <img src="electromechanicalworks.jpg" alt="Service Detail Image">
+        </div>
+    </div>
+</section>
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-image">
+            <img src="assets/img/GlassInstallation.jpg" alt="Service Detail Image">
+        </div>
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Glass and Aluminium Installation and Maintenance . </h2>
+            <p class="service-detail-description">Glass and Aluminium Installation and Maintenance offers specialized 
+                services in the installation and upkeep of glass and aluminium structures. From custom windows and
+                 facades to doors and partitions, we deliver solutions that combine aesthetics with durability.
+                  Our expert team ensures precision in every installation and provides ongoing maintenance to
+                   keep your structures in top condition. With a focus on quality materials, skilled craftsmanship, 
+                   and attention to detail, we are committed to enhancing the beauty and functionality of your spaces
+                 while building long-term relationships based on trust and excellence..</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <div class="service-detail-content">
+            <h2 class="service-detail-title">Exterior Building Cladding Contracting
+            </h2>
+            <p class="service-detail-description">Exterior Building Cladding Contracting provides specialized services in 
+                the design, installation, and maintenance of exterior cladding systems. Our solutions are tailored to
+                 enhance the aesthetic appeal, durability, and energy efficiency of buildings, using a wide range 
+                 of high-quality materials. With a commitment to precision and innovation, our team ensures that 
+                 every cladding project is executed to the highest standards, meeting both functional and architectural 
+                 requirements. We prioritize client satisfaction and long-lasting results,
+                 building structures that not only look impressive but also stand the test of time..</p>
+        </div>
+        <div class="service-detail-image">
+            <img src="assets/img/externalcladding.jpg" alt="Service Detail Image">
         </div>
     </div>
 </section>
@@ -346,38 +553,23 @@
 //         });
 //     }
 // });
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('hero-video');
-    if (video) {
-        video.muted = false; // Attempt to play with sound
+document.getElementById('play-button').addEventListener('click', function() {
+    const video = document.getElementById('hero-video');
+    const volumeSlider = document.getElementById('volume-slider');
 
-        // Attempt to autoplay the video
-        video.play().catch(function(error) {
-            console.log('Autoplay failed:', error);
-            video.controls = true; // Show controls if autoplay fails
-
-            // Optional: Provide a UI prompt for user interaction
-            var playButton = document.createElement('button');
-            playButton.textContent = 'Play Video';
-            playButton.style.position = 'absolute';
-            playButton.style.top = '50%';
-            playButton.style.left = '50%';
-            playButton.style.transform = 'translate(-50%, -50%)';
-            playButton.style.zIndex = '1';
-            playButton.style.padding = '1rem';
-            playButton.style.backgroundColor = '#007aff';
-            playButton.style.color = 'white';
-            playButton.style.border = 'none';
-            playButton.style.borderRadius = '5px';
-            document.querySelector('.service-service-hero-section').appendChild(playButton);
-            
-            playButton.addEventListener('click', function() {
-                video.muted = false;
-                video.play();
-                playButton.style.display = 'none';
-            });
-        });
+    if (video.paused) {
+        video.muted = false;  // Unmute the video
+        video.play();         // Play the video
+        this.style.display = 'none';  // Hide the play button
+        volumeSlider.style.display = 'block';  // Show the volume slider
+    } else {
+        video.pause();        // Pause the video if it's playing
     }
+});
+
+document.getElementById('volume-slider').addEventListener('input', function() {
+    const video = document.getElementById('hero-video');
+    video.volume = this.value;  // Adjust the video volume
 });
 
 
