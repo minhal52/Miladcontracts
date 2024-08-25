@@ -148,7 +148,7 @@ body.dark-theme{
 
 .section-subtitle {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: 26px;
   color: var(--second-color);
 }
 
@@ -299,7 +299,7 @@ nav li:first-child {
   row-gap: 3.5rem;
 }
 
-.home-title, .home-value-number {
+.home-title {
   color: #fff;
 }
 
@@ -309,11 +309,7 @@ nav li:first-child {
   margin-bottom: 1.25rem;
 }
 
-.home-value-description {
-  display: flex;
-  color: var(--text-color-light);
-  font-size: var(--smaller-font-size);
-}
+
 
 /* For large screens */
 @media screen and (min-width: 1023px) {
@@ -329,14 +325,14 @@ nav li:first-child {
       margin-bottom: 2rem;
   }
 
-  .home-description,
+  /* .home-description,
   .home-search {
       margin-bottom: 3rem;
   }
 
   .home-values {
       column-gap: 3.5rem;
-  }
+  } */
 }
 
 
@@ -387,7 +383,7 @@ nav li:first-child {
   height: 300px; /* Fixed height for image */
   object-fit: cover; /* Ensure image covers area without distortion */
   border-radius: 1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .popular-data {
@@ -448,13 +444,13 @@ nav li:first-child {
 .swiper-button-next {
   right: calc(50% - 3rem);
 }
-
 /*=============== VALUE / about ===============*/
-.value-container{
+.value-container {
   row-gap: 3rem;
-  margin-top: 80px;
+  margin-top: 20px;
 }
-.value-images{
+
+.value-images {
   position: relative;
   display: flex;
   justify-content: center;
@@ -481,26 +477,33 @@ nav li:first-child {
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
-.value-description{
-  font-size: var(--small-font-size);
+.value-description {
+  font-size: var(--font-medium);
   margin-bottom: 2rem;
+  text-align: justify; /* Ensures text alignment across the width */
+  line-height: 1.5rem; /* Consistent line-height for readability */
+  word-wrap: break-word; /* Prevents text from overflowing */
 }
+
+.value-data .section-title {
+  text-align: left;
+}
+
 /* ===============large screen================ */
-@media screen and (min-width : 1023px){
-.value-orbe
-{
-height: 500px;
-width: auto;
- /* height: 570px;border-radius: 258px 258px 16px 16px; */
-}
-
-.value-img
-{
-  height: 500px;
-  width: auto;
- /* border-radius: 238px 238px 12px 12px; */
-}
-
+@media screen and (min-width: 1023px) {
+  .value-orbe {
+    height: 500px;
+    width: auto;
+    /* height: 570px;border-radius: 258px 258px 16px 16px; */
+  }
+  .value-container{
+    margin-top: 0.5px;
+  }
+  .value-img {
+    height: 500px;
+    width: auto;
+    /* border-radius: 238px 238px 12px 12px; */
+  }
 }
 
 
@@ -839,88 +842,7 @@ font-size: 12px;
 font-size: 10px;
 color: var(--second-color);
 }
-}
-
-/*=============== SUBSCRIBE ===============*/
-.subscribe {
-  padding: 0; /* Remove extra padding from the container */
-}
-
-.subscribe-container {
-  background-color: var(--first-color);
-  padding: 3rem 2rem;
-  border-radius: 1.25rem;
-  border: 6px solid var(--first-color-light);
-  text-align: center;
-  margin: 0; /* Ensure there's no margin above the container */
-}
-.contact-left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-   
-  }
-  .contact-left-title h1{
-  font-weight: 600;
-  font-size: 40px;
-  margin-bottom: 5px;
-  }
-  
-  .contact-left-title hr{
-    border: none;
-    width: 120px;
-    height: 5px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .contact-inputs{
-    width: 400px;
-    height: 50px;
-    border: none;
-    outline: none;
-    padding-left: 25px;
-    font-weight: 500;
-    border-radius: 50px;
-    color: #666;
-  
-  }
-  .contact-left textarea{
-    height: 140px;
-    padding-top: 15px;
-    border-radius: 20px;
-  }
-  .contact-inputs::placeholder{
-    color: #999;
-  }
-  .contact-left button{
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: #fff;
-    gap: 10px;
-    border: none;
-    border-radius: 50px;
-    background: blue;
-  }
-  
-  
-  @media(max-width:800px){
-    .contact-inputs{
-      width: 70vw;
-    }
-    .subscribe {
-     margin-top: 30px;
-     padding: 6px;
-    }
-    
-  
-  }
-  
-
-  
+}  
 /*=============== FOOTER ===============*/
 /* General styles for the footer */
 .footer-container {
@@ -1485,7 +1407,7 @@ height: 280px;
     justify-content: space-between;
     margin-left: 40px; /* Add left margin for large screens */
     margin-right: 40px; /* Add right margin for large screens */
-    margin-bottom: 40px;
+    margin-bottom: 2px;
   }
 
   .counter-numbers {
@@ -1501,7 +1423,7 @@ height: 280px;
 @media (min-width: 768px) and (max-width: 1023px) {
   .container2 {
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .counter-numbers {
@@ -1517,8 +1439,8 @@ height: 280px;
 @media (max-width: 767px) {
   .container2 {
     flex-direction: column;
-    margin-bottom: 25px;
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .counter-numbers {
@@ -1546,9 +1468,9 @@ height: 280px;
   }
 }
 /* ====================================================== */
-/* service */
+/* Service Section */
 .service-detail-section {
-  padding: 2rem 0;
+  padding: 2rem 1rem; /* Adjusted padding for consistency */
 }
 
 .service-detail-container {
@@ -1559,7 +1481,7 @@ height: 280px;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 1rem;
-  max-width: 1200px; /* Add max-width to keep content centered and aligned */
+  max-width: 1200px; /* Keeps content centered and aligned */
 }
 
 .service-detail-content {
@@ -1569,30 +1491,35 @@ height: 280px;
 }
 
 .service-detail-title {
-  font-size:24px;
+  font-size: 24px;
   margin-bottom: 1rem;
   color: var(--title-color);
+  line-height: 1.2; /* Added line-height for better text spacing */
 }
 
 .service-detail-description {
   font-size: 14px;
   margin-bottom: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.5rem; /* Adjusted line-height for better readability */
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  word-break: break-word; /* Breaks words at the end of a line if necessary */
+  text-align: justify; /* Justifies the text, making the alignment even on both sides */
+  padding: 0 1rem; /* Adds padding to ensure text is not too close to the edges */
 }
 
 .service-detail-image {
   flex: 1;
-  height: 400px; /* Fixed height for images */
-  max-width: 100%; /* Ensure image does not exceed container width */
+  height: 400px;
+  max-width: 100%;
   min-width: 300px;
-  display: flex; /* Center image within the container */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .service-detail-image img {
-  width: auto; /* Maintain aspect ratio */
-  height: 100%; /* Fill the height of the container */
+  width: auto;
+  height: 100%;
   border-radius: 1rem;
   object-fit: cover;
 }
@@ -1605,54 +1532,55 @@ height: 280px;
 
   .service-detail-description {
     font-size: var(--font-medium);
-line-height: 1.25rem;
+    line-height: 1.5rem; /* Consistent line-height */
   }
 }
 
 @media (max-width: 768px) {
   .service-detail-container {
-    flex-direction: column; /* Stack image and content vertically */
-    align-items: center; /* Center align items */
+    flex-direction: column;
+    align-items: center;
   }
 
   .service-detail-title {
     font-size: var(--font-medium);
+    line-height: 1.2; /* Added for consistency */
   }
 
   .service-detail-description {
     font-size: var(--smaller-font-size);
-    
-    
-  
+    line-height: 1.5rem; /* Consistent line-height */
   }
 
   .service-detail-image,
   .service-detail-content {
-    width: 100%; /* Ensure both image and content take full width */
-    margin-bottom: 1rem; /* Add space between stacked elements */
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .service-detail-content {
-    order: 2; /* Ensure content comes after image */
+    order: 2;
   }
 
   .service-detail-image {
-    order: 1; /* Ensure image comes before content */
-    height: 300px; /* Reduced height for smaller screens */
+    order: 1;
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .service-detail-title {
     font-size: var(--font-semi-bold);
+    line-height: 1.2; /* Ensures text spacing */
   }
 
   .service-detail-description {
     font-size: var(--smaller-font-size);
+    line-height: 1.5rem; /* Consistent line-height */
   }
 
   .service-detail-image {
-    height: 200px; /* Further reduced height for very small screens */
+    height: 200px;
   }
 }
 
