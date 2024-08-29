@@ -52,17 +52,111 @@
       grid-template-columns: repeat(5, 1fr);
     }
   }
+
+  
+  /* Section Heading */
+.section-heading {
+  text-align: center;
+  margin-bottom: 1rem; /* Adjust as needed */
+  font-size: 22px;
+  margin-top: 70px;
+  
+}
+
+.section-subtitle {
+  font-size: var(--font-large); /* Base size for smaller screens */
+  font-weight: bold;
+  color:var(--second-color); /* Adjust color as needed */
+  display: block;
+  margin-bottom: 1rem; /* Space between subtitle and container */
+}
+
+/* Large screens */
+@media screen and (min-width: 1023px) {
+  .section-subtitle {
+    font-size: 40px; /* Increase size for large screens */
+    font-weight: bold; /* Increase font weight */
+    text-align: center; /* Center the subtitle */
+    margin-top: -6rem; /* Move the subtitle up */
+    margin-bottom: 2rem; /* Add margin-bottom to provide space below the subtitle */
+  }
+
+  .value-container {
+    margin-top: 1rem; /* Adjust margin as needed */
+  }
+}
+
+.value-container {
+  row-gap: 3rem;
+  margin-top: 20px;
+}
+
+.value-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; Center the content vertically */
+}
+
+.value-orbe {
+  width: 280px;
+  height: 280px;
+  background-color: hsl(228, 24%, 97%);
+  /* border-radius: 135px 135px 16px 16px; */
+  /* position: absolute; Make sure the orbe is the background */
+  /* z-index: 1; */
+}
+
+.value-img {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  /* border-radius: 125px 125px 12px 12px; */
+  inset: 0;
+  margin: auto;
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+.value-description {
+  font-size: var(--font-medium);
+  margin-bottom: 2rem;
+  text-align: justify; /* Ensures text alignment across the width */
+  line-height: 2rem; /* Consistent line-height for readability */
+  word-wrap: break-word; /* Prevents text from overflowing */
+}
+
+.value-data .section-title {
+  text-align: left;
+}
+
+/* ===============large screen================ */
+@media screen and (min-width: 1023px) {
+  .value-orbe {
+    height: 500px;
+    width: auto;
+    /* height: 570px;border-radius: 258px 258px 16px 16px; */
+  }
+  .value-container{
+    margin-top: 0.5px;
+  }
+  .value-img {
+    height: 500px;
+    width: auto;
+    /* border-radius: 238px 238px 12px 12px; */
+  }
+}
   </style>
 <body>
     <!--==================== HEADER ====================-->
     <nav>
       <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
           <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-       
-        <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+     <li class="hideOnMobile"><a href="index.html">HOME</a></li>
         <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
         <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
-        <li class="hideOnMobile"><a href="contact-us.html">CONTACT</a></li>
+        <li class="hideOnMobile"><a href="contact-us.html">Request a Quote</a></li>
+  
         <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
       </ul>
       <ul class="sidebar">
@@ -70,27 +164,28 @@
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="ourservices.html">SERVICES</a></li>
-        <li><a href="contact-us.html">CONTACT</a></li>
-      </ul>
+        <li><a href="contact-us.html">Request a Quote</a></li>
+    </ul>
     </nav>
-
+    
     <!--==================== MAIN ====================-->
     <main class="main">
     <!--==================== VALUE ====================-->
     <section class="value section" id="value">
-        <div class="value-container container grid">
-            <div class="value-images">
-                <div class="value-orbe"></div>
-                <div class="value-img">
-                    <img src="assets/img/miladaboutimg.jpg" alt="">
-                </div>
+      <div class="section-heading">
+        <span class="section-subtitle">About Us.</span>
+    </div>
+    <div class="value-container container grid">
+        <div class="value-images">
+            <div class="value-orbe"></div>
+            <div class="value-img">
+                <img src="assets/img/miladaboutimg.jpg" alt="">
             </div>
-            <div class="value-content">
-                <div class="value-data">
-                    <span class="section-subtitle">About Us</span>
-                    <h2 class="section-title">Unlocking Possibilities and Empowering Progress
-                        <span>.</span>
-                    </h2>
+        </div>
+        <div class="value-content">
+            <h2 class="section-title">Unlocking Possibilities and Empowering Progress
+                <span>.</span>
+            </h2>
                     <p class="value-description">Milad Constructors and Contractors is a well-established and popular 
                         company with an excellent track record for customer satisfaction. Milad Constructors and Contractors 
                         provides complete solutions for our customers through a wide range of products. We offer customized
@@ -100,11 +195,7 @@
                         Milad Constructors and Contractors supplies industries and consumers around the globe with 
                         innovative products and solutions. Despite the heavy competition that exists today, Milad 
                         Constructors and Contractors continues to shine as a top choice. 
-                        
-                        .</p>
-                </div>
-         
-
+               
                 <!-- <div class="value-item">
                     <button class="value-button"><a href="about.html">Read More</a></button>
                 </div> -->
@@ -148,8 +239,12 @@
  </ul>
 
     </main>
+<!--  Text or Image -->
+<div class="geeks">
 
-    <!--==================== FOOTER ====================-->
+
+  <img src="assets/img/ebotalogo.jpg" alt=""><h1>ebota</h1>
+</div>
   <!--==================== FOOTER ====================-->
   <footer class="footer section">
     <div class="footer-container container grid">

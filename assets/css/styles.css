@@ -124,7 +124,7 @@ body.dark-theme{
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
+  max-width:1350px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -280,6 +280,9 @@ nav li:first-child {
   position: relative;
   padding-top: 4rem;
   padding-bottom: 0; /* Adjust if needed */
+  background: url('assets/img/Miladcompanylogo3.jpg') no-repeat center center;
+  background-size: cover; /* Ensure the background image covers the section */
+  background-position: center; /* Center the background image */
 }
 
 .home-overlay {
@@ -296,43 +299,32 @@ nav li:first-child {
   position: relative;
   z-index: 2; /* Ensure the content sits above the overlay */
   padding-top: 4rem;
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  text-align: center; /* Center text inside */
+  height: 100vh; /* Make sure the container takes full viewport height */
   row-gap: 3.5rem;
 }
 
 .home-title {
-  color: #fff;
-}
-
-.home-title {
+  display: none;
+  /* color: #fff;
   font-size: var(--biggest-font-size);
-  line-height: 120%;
-  margin-bottom: 1.25rem;
+  line-height: 120%; */
+  margin-bottom: 2rem; /* Increase space below the title */
 }
-
-
 
 /* For large screens */
 @media screen and (min-width: 1023px) {
   .home-container {
-      column-gap: 2rem;
-  }
-
-  .home-data {
-      padding-bottom: 4rem;
+    column-gap: 2rem;
+    height: 100vh; /* Keep full viewport height for large screens */
   }
 
   .home-title {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Ensure consistent spacing */
   }
-
-  /* .home-description,
-  .home-search {
-      margin-bottom: 3rem;
-  }
-
-  .home-values {
-      column-gap: 3.5rem;
-  } */
 }
 
 
@@ -368,7 +360,7 @@ nav li:first-child {
   width: 290px; /* Fixed width */
   height: 400px; /* Fixed height, adjust as needed */
   background-color: var(--container-color);
-  padding: .5rem .5rem 1.5rem;
+  /* padding: .5rem .5rem 1.5rem; */
   border-radius: 1rem;
   margin: 0 auto;
   transition: .4s;
@@ -380,7 +372,7 @@ nav li:first-child {
 
 .popular-img {
   width: 100%; /* Ensure image fits within card */
-  height: 300px; /* Fixed height for image */
+  height: 270px; /* Fixed height for image */
   object-fit: cover; /* Ensure image covers area without distortion */
   border-radius: 1rem;
   /* margin-bottom: 1rem; */
@@ -445,6 +437,38 @@ nav li:first-child {
   right: calc(50% - 3rem);
 }
 /*=============== VALUE / about ===============*/
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  margin-bottom: 1rem; /* Adjust as needed */
+  font-size: 22px;
+  margin-top: 25px;
+  
+}
+
+.section-subtitle {
+  font-size: var(--font-large); /* Base size for smaller screens */
+  font-weight: bold;
+  color:var(--second-color); /* Adjust color as needed */
+  display: block;
+  margin-bottom: 1rem; /* Space between subtitle and container */
+}
+
+/* Large screens */
+@media screen and (min-width: 1023px) {
+  .section-subtitle {
+    font-size: 40px; /* Increase size for large screens */
+    font-weight: bold; /* Increase font weight */
+    text-align: center; /* Center the subtitle */
+    margin-top: -6rem; /* Move the subtitle up */
+    margin-bottom: 2rem; /* Add margin-bottom to provide space below the subtitle */
+  }
+
+  .value-container {
+    margin-top: 1rem; /* Adjust margin as needed */
+  }
+}
+
 .value-container {
   row-gap: 3rem;
   margin-top: 20px;
@@ -481,7 +505,7 @@ nav li:first-child {
   font-size: var(--font-medium);
   margin-bottom: 2rem;
   text-align: justify; /* Ensures text alignment across the width */
-  line-height: 1.5rem; /* Consistent line-height for readability */
+  line-height: 2rem; /* Consistent line-height for readability */
   word-wrap: break-word; /* Prevents text from overflowing */
 }
 
@@ -637,18 +661,6 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-}
-
-
-
-/* removing from search box */
-.search-box input,
-.search-box textarea,
-.search-box label {
-padding: 0;
-border: none;
-border-radius: 0;
-margin-bottom:0;
 }
 
 /*  */
@@ -843,6 +855,46 @@ font-size: 10px;
 color: var(--second-color);
 }
 }  
+
+
+
+/* -=================================== */
+.geeks {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1; /* Adjust the opacity to make the watermark subtle */
+  font-size: 50px; /* Adjust the size as needed */
+  color: black; /* Or use an image */
+  pointer-events: none; /* Ensure it doesn't interfere with any interactions */
+  z-index: 1000; /* Ensure it is on top of other elements */
+  text-align: center;
+}
+
+/* To use an image as a  */
+.geeks img {
+  width: auto;
+  height: auto;
+  opacity: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: none;
+}
+
+/* Mobile screens adjustment */
+@media (max-width: 600px) {
+  .geeks {
+    font-size: 10px; /* Smaller font size for mobile */
+    opacity: 0.50; /* Slightly increase opacity if needed */
+  }
+
+  .geeks img {
+    width: 70%; /* Adjust the size of the image for mobile */
+    height: auto;
+  }
+}
+
 /*=============== FOOTER ===============*/
 /* General styles for the footer */
 .footer-container {
@@ -1211,9 +1263,10 @@ height: 280px;
   .section-title{
     font-size: 2.25rem;
   }
-  .section-subtitle{
-    font-size: var(--normal-font-size);
-  }
+  /* .section-subtitle{
+    font-size:32px;
+    font-weight: var(--font-medium);
+  } */
 
   .nav{
     height: calc (var(--header-height) + 1.5rem);
@@ -1274,8 +1327,8 @@ height: 280px;
   }
 
   .popular-card{
-    width: 320px;
-    padding: .75rem .75rem 2rem;
+    width: 400px;
+    padding: .68rem .68rem 0.5rem;
   }
  
  .popular-data{
@@ -1294,19 +1347,7 @@ height: 280px;
   margin-bottom: 2.5rem;
  }
 
- .value-accordian-title{
-  font-size: var(--normal-font-size);
- }
-
- .value-accordian-item{
-  padding: 1.25rem 1.25rem 1.25rem 1rem;
- }
-
- .value-accordian-description{
-  padding-bottom: 1rem;
-  font-size: var(--small-font-size);
-
- }
+ 
  .contact-card{
   grid-template-columns: repeat(2, 200px);
  }
@@ -1498,7 +1539,7 @@ height: 280px;
 }
 
 .service-detail-description {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 1.5rem;
   line-height: 1.5rem; /* Adjusted line-height for better readability */
   word-wrap: break-word; /* Ensures long words break to the next line */
@@ -1522,6 +1563,11 @@ height: 280px;
   height: 100%;
   border-radius: 1rem;
   object-fit: cover;
+}
+
+.product-detail-title {
+  font-size: var(--small-font-size);
+  color: var(--second-color);
 }
 
 /* Media Queries for Responsiveness */
@@ -1584,17 +1630,191 @@ height: 280px;
   }
 }
 
+/* Base Styles for Product List */
+.product-list {
+  padding-left: 20px;
+}
 
-/* service ksa */
+.product-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: var(--small-font-size); /* Base font size */
+}
 
+/* Increase font size for large screens */
+@media (min-width: 1200px) {
+  .product-list li {
+    font-size: var(--medium-font-size); /* Increased font size for large screens */
+  }
+  .product-detail-title{
+    font-size: 18px;
+  }
+}
+
+/* Adjust for even larger screens if needed */
+@media (min-width: 1600px) {
+  .product-list li {
+    font-size: var(--large-font-size); /* Further increased font size for very large screens */
+  }
+}
+
+/* Hide hr on large screens */
+@media (min-width: 769px) {
+  hr {
+    display: none;
+  }
+}
+
+/* Display hr on mobile screens */
+@media (max-width: 768px) {
+  hr {
+    display: block;
+    color: var(--first-color-light);
+    width: 80%;
+    margin: 0 auto; /* Centers the hr element horizontally */
+    border: 0; /* Removes default border style */
+    border-top: 1px solid var(--first-color-light); /* Custom border style */
+  }
+}
+
+
+/* Service KSA */
 .services-ksa {
   text-align: center;
   padding: 40px 20px;
-  background-color: white;}
-
+  background-color: white;
+}
 
 .services-ksa-title {
   font-size: 2rem;
-  color:var(--second-color);
+  color: var(--second-color);
   margin-bottom: 10px;
+}
+
+
+/* service section vdeo==================== */
+.service-service-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  padding: 1rem 2rem;
+  background-color: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero-title {
+      font-size: 2.5rem;
+  }
+
+  .hero-description {
+      font-size: 1.25rem;
+  }
+
+  .hero-button {
+      font-size: 0.875rem;
+      padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+      font-size: 2rem;
+  }
+
+  .hero-description {
+      font-size: 1rem;
+  }
+
+  .hero-button {
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 1.5rem;
+  }
+
+  .hero-description {
+      font-size: 0.875rem;
+  }
+
+  .hero-button {
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+  }
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.play-button svg {
+  fill: white;
+}
+.volume-slider {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 3;
+  cursor: pointer;
+  display: none; /* Initially hidden */
 }

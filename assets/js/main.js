@@ -1,4 +1,7 @@
- const workSection = document.querySelector(".section-work-data");
+// ==========================counting numbers==========================
+
+
+const workSection = document.querySelector(".section-work-data");
 const workObserver = new IntersectionObserver(
   (entries, observer) => {
     const [entry] = entries;
@@ -37,11 +40,6 @@ const workObserver = new IntersectionObserver(
 );
 
 workObserver.observe(workSection);
-
-
-
-
-
 
 /*=============== SWIPER POPULAR ===============*/
 var swiperPopular = new Swiper(".popular-container", {
@@ -110,18 +108,27 @@ sr.reveal('.value-content, .contact-images', { origin: 'right' });
 
 
 
+// ==========================vdeo=============================
+document.getElementById('play-button').addEventListener('click', function() {
+  const video = document.getElementById('hero-video');
+  const volumeSlider = document.getElementById('volume-slider');
 
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('hero-video');
-    video.play().catch(function() {
-        // Autoplay failed, possibly due to browser policy. 
-        // Add a click event listener to play the video.
-        video.muted = true;
-        video.play();
-        video.controls = true;
-    });
+  if (video.paused) {
+      video.muted = false;  // Unmute the video
+      video.play();         // Play the video
+      this.style.display = 'none';  // Hide the play button
+      volumeSlider.style.display = 'block';  // Show the volume slider
+  } else {
+      video.pause();        // Pause the video if it's playing
+  }
 });
 
+document.getElementById('volume-slider').addEventListener('input', function() {
+  const video = document.getElementById('hero-video');
+  video.volume = this.value;  // Adjust the video volume
+});
+
+// navigation bar mobile view=====================
 
 function showSidebar(){
   const sidebar = document.querySelector('.sidebar')

@@ -25,76 +25,80 @@
 <body>
     <!--==================== HEADER ====================-->
     <nav>
-        <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
-            <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-         
-          <li class="hideOnMobile"><a href="index.html">HOME</a></li>
-          <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
-          <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
-          <li class="hideOnMobile"><a href="contact-us.html">CONTACT</a></li>
-          <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-        </ul>
-        <ul class="sidebar">
-          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="ourservices.html">SERVICES</a></li>
-          <li><a href="contact-us.html">CONTACT</a></li>
-        </ul>
-      </nav>
+      <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
+          <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+       
+        <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+        <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+        <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
+        <li class="hideOnMobile"><a href="contact-us.html">Request a Quote</a></li>
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="ourservices.html">SERVICES</a></li>
+        <li><a href="contact-us.html">Request a Quote</a></li>
+        
+      
+      </ul>
+    </nav>
+    
     <!--==================== MAIN ====================-->
     <main class="main">
         <div>
-<!--          
-            <h2>Contact Us</h2> -->
             <div class="contact-container">
-              <div class="contact-box">
-                <div>
-                    <i class='bx bxs-phone-call'></i>
-                  <p class="contact-info">
-                    <a style="font-weight: normal;" href="tel:+919945883157">+966593127494</a><br>
-                  </p>
+                <h2>Contact Us</h2>
+                <div class="contact-box">
+                    <div>
+                        <i class='bx bxs-phone-call'></i>
+                        <p class="contact-info">
+                            <a style="font-weight: normal;" href="tel:+966593127494">+966593127494</a><br>
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bxs-envelope'></i>
+                        <p class="contact-info">
+                            <a href="mailto:info@miladconstruction.com">info@miladconstruction.com</a>
+                        </p>
+                    </div>
                 </div>
-      
-                <div>
-                    <i class='bx bxs-envelope'></i>
-                  <p class="contact-info"><a style="font-weight: normal;"
-                      href="mailto:@miladconstruction.com">
-                      @miladconstruction.com</a>
+            </div>
+            <div class="contact-container1">
+                <div class="contact-form" id="contactform">
+                    <h2>Get In Touch</h2>
+                    <form id="contactForm" onsubmit="return handleSubmit()">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="country">Select Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="UAE">UAE</option>
+                        </select>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button id="button" type="submit">Request a Quote</button>
+                    </form>
                 </div>
-      
-                <!-- <div>
-                    <i class='bx bxs-map'></i> 
-                  <p class="contact-info"> <a style="font-weight: normal;">Asma Bint Malik Street,<br>Al Arid Dist. Riyad, KSA
-                  </a>   </div>
-              </div> -->
-      
             </div>
-          </div>
-          <div class="contact-container1">
-           
-      
-            <div class="contact-form">
-                <h2>Get In Touch</h2>
-         
-              <form id="contactForm" action="#" method="post" onsubmit="validateFormAndSend(); return false;">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-      
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-      
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-      
-                <button id="button">Send Message</button>
-              </form>
-            </div>
-          </div>
+        </div>
+  
         </main>
     <!-- ============================================== -->
+<!--  Text or Image -->
+<div class="geeks">
 
-    <!--==================== FOOTER ====================-->
+
+  <img src="assets/img/ebotalogo.jpg" alt=""><h1>ebota</h1>
+</div>
+
    <!--==================== FOOTER ====================-->
    <footer class="footer section">
     <div class="footer-container container grid">
@@ -133,7 +137,23 @@
     </div>
 </footer>
 
+<script>
+    function handleSubmit(event) {
+       event.preventDefault(); // Prevent the form from submitting in the traditional way
 
+       const form = document.getElementById('contactForm');
+       const name = encodeURIComponent(form.name.value);
+       const email = encodeURIComponent(form.email.value);
+       const country = encodeURIComponent(form.country.value);
+       const message = encodeURIComponent(form.message.value);
+
+       // Create the mailto link with pre-filled content
+       const mailtoLink = `mailto:info@miladconstruction.com?subject=Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0ACountry: ${country}%0AMessage: ${message}`;
+
+       // Open the mailto link in the user's default email client
+       window.location.href = mailtoLink;
+   }
+</script>
 
 
     <!--========== SCROLL UP ==========-->
