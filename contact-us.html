@@ -19,9 +19,16 @@
 
     <title>Milad constructors</title>
 </head>
-<style>
- 
-</style>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "xSPgeAEQXI2ieTFxZ",
+});
+})();
+</script>
 <body>
     <!--==================== HEADER ====================-->
     <nav>
@@ -40,6 +47,7 @@
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="ourservices.html">SERVICES</a></li>
         <li><a href="contact-us.html">Request a Quote</a></li>
+        
         
       
       </ul>
@@ -68,7 +76,7 @@
             <div class="contact-container1">
                 <div class="contact-form" id="contactform">
                     <h2>Get In Touch</h2>
-                    <form id="contactForm" onsubmit="return handleSubmit()">
+                    <form id="contactForm">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                         
@@ -77,6 +85,7 @@
                         
                         <label for="country">Select Country:</label>
                         <select id="country" name="country" required>
+                            <option value=""></option>
                             <option value="Saudi Arabia">Saudi Arabia</option>
                             <option value="UAE">UAE</option>
                         </select>
@@ -136,24 +145,6 @@
         </span>
     </div>
 </footer>
-
-<script>
-    function handleSubmit(event) {
-       event.preventDefault(); // Prevent the form from submitting in the traditional way
-
-       const form = document.getElementById('contactForm');
-       const name = encodeURIComponent(form.name.value);
-       const email = encodeURIComponent(form.email.value);
-       const country = encodeURIComponent(form.country.value);
-       const message = encodeURIComponent(form.message.value);
-
-       // Create the mailto link with pre-filled content
-       const mailtoLink = `mailto:info@miladconstruction.com?subject=Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0ACountry: ${country}%0AMessage: ${message}`;
-
-       // Open the mailto link in the user's default email client
-       window.location.href = mailtoLink;
-   }
-</script>
 
 
     <!--========== SCROLL UP ==========-->

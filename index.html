@@ -20,14 +20,17 @@
 
     <title>Milad constructors</title>
 </head>
-<style>
-    /* .nav-logo-img{
-        height: 60px;
-        width: 60px;
-        mix-blend-mode: multiply;
-               } */
- 
- </style>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "xSPgeAEQXI2ieTFxZ",
+});
+})();
+</script>
+
 <body>
     <!--==================== HEADER ====================-->
         <nav>
@@ -57,17 +60,19 @@
     <main class="main">
        
         <!--==================== HOME ====================-->
-        <section class="home section" id="home" style="background: url('assets/img/Miladcompanylogo3.jpg') no-repeat center center; background-size: cover;">
-            <div class="home-overlay"></div>
-            <div class="home-container container grid">
-                <div class="home-data">
-                    <h1 class="home-title">
-                        Efficiency and Excellence <br>converge in our Industrial process
-                    </h1>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Efficiency and Excellence <br>converge in our Industrial process.</h1>
+                    <p></p>
+                </div>
+                <div class="hero-logo">
+                    <img src="assets/img/milad logopng.png" alt="Logo">
                 </div>
             </div>
+            <img class="hero-image" src="assets/img/miladworks13.jpg" alt="Centered Image">
         </section>
-        
+    
         
         <!-- ======================================== 
           Our work counter Section Start  
@@ -94,103 +99,92 @@
 </div>
 
         <!--==================== POPULAR / services we offer====================-->
-        <h2 class="section-title">Our Services <span>.</span></h2>
-                
-
         <section class="service-service-hero-section">
-            <video id="hero-video" class="hero-video" muted>
+            <video id="hero-video" class="hero-video" autoplay>
                 <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
             </video>
-            
+        
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to Milad Constructors</h1>
                 <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
                 <a href="ourservices.html" class="hero-button">Explore Our Services</a>
             </div>
         
-            <!-- Play button -->
-            <div id="play-button" class="play-button">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5v14l11-7z"></path>
-                </svg>
-            </div>
+            <!-- Audio Control Button (Initially Hidden) -->
+            <button id="audio-toggle" class="audio-toggle" style="display: none;">Unmute</button>
+        </section>
         
-            <!-- Volume control -->
-            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
-        </section>
-        <section class="popular section" id="popular">
-            <div class="container">
-                <span class="section-subtitle"></span>
-                
-                <div class="popular-container swiper">
-                    <div class="swiper-wrapper">
-                        <article class="popular-card swiper-slide">
-                            <img src="assets/img/Manpowerimg.jpg" alt="1service" class="popular-img">
+        
+        
+        <div class="popular-container swiper">
+            <div class="swiper-wrapper">
+                <article class="popular-card swiper-slide">
+                    <img src="assets/img/Manpowerimg.jpg" alt="1service" class="popular-img">
 
-                            <div class="popular-data">
-                                <h2 class="popular-detail">
+                    <div class="popular-data">
+                        <h2 class="popular-detail">
 
-                                </h2>
-                                <h3 class="popular-title"></h3>
-                                <p class="popular-description">
-                                    ManPower Solutions.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="popular-card swiper-slide">
-                            <img src="assets/img/supply of firefighting.jpg" alt="1service" class="popular-img">
-
-                            <div class="popular-data">
-                                <h2 class="popular-detail">
-
-                                </h2>
-                                <h3 class="popular-title"></h3>
-                                <p class="popular-description">
-                                    Supply & Installation of Fire Fighting System.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="popular-card swiper-slide">
-                            <img src="assets/img/miladworks13.jpg" alt="1service" class="popular-img">
-
-                            <div class="popular-data">
-                                <h2 class="popular-detail">
-
-                                </h2>
-                                <h3 class="popular-title"></h3>
-                                <p class="popular-description">
-                                    Storage of Tanks & Logistics Services.
-                                </p>
-                            </div>
-                        </article>
-                   
-                        <article class="popular-card swiper-slide">
-                            <img src="assets/img/miladworks12.jpg" alt="1service" class="popular-img">
-
-                            <div class="popular-data">
-                                <h2 class="popular-detail">
-
-                                </h2>
-                                <h3 class="popular-title"></h3>
-                                <p class="popular-description">
-                                  Chemical Supply.
-                                </p>
-                            </div>
-                        </article>
+                        </h2>
+                        <h3 class="popular-title"></h3>
+                        <p class="popular-description">
+                            ManPower Solutions.
+                        </p>
                     </div>
-                    <div class="swiper-button-next">
-                        <i class='bx bx-chevron-right'></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class='bx bx-chevron-left'></i>
+                </article>
+                <article class="popular-card swiper-slide">
+                    <img src="assets/img/supply of firefighting.jpg" alt="1service" class="popular-img">
 
-                    </div>
+                    <div class="popular-data">
+                        <h2 class="popular-detail">
 
-                </div>
+                        </h2>
+                        <h3 class="popular-title"></h3>
+                        <p class="popular-description">
+                            Supply & Installation of Fire Fighting System.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="popular-card swiper-slide">
+                    <img src="assets/img/miladworks13.jpg" alt="1service" class="popular-img">
+
+                    <div class="popular-data">
+                        <h2 class="popular-detail">
+
+                        </h2>
+                        <h3 class="popular-title"></h3>
+                        <p class="popular-description">
+                            Storage of Tanks & Logistics Services.
+                        </p>
+                    </div>
+                </article>
+           
+                <article class="popular-card swiper-slide">
+                    <img src="assets/img/miladworks12.jpg" alt="1service" class="popular-img">
+
+                    <div class="popular-data">
+                        <h2 class="popular-detail">
+
+                        </h2>
+                        <h3 class="popular-title"></h3>
+                        <p class="popular-description">
+                          Chemical Supply.
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="swiper-button-next">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class='bx bx-chevron-left'></i>
+
             </div>
 
-        </section>
+        </div>
+    </div>
+
+</section>
 
     <!--==================== VALUE ====================-->
 <section class="value section" id="value">
@@ -227,7 +221,49 @@
     <img src="assets/img/ebotalogo.jpg" alt=""><h1>ebota</h1>
 </div>
         <!--==================== CONTACT ====================-->
-   
+        <div>
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <div class="contact-box">
+                    <div>
+                        <i class='bx bxs-phone-call'></i>
+                        <p class="contact-info">
+                            <a style="font-weight: normal;" href="tel:+966593127494">+966593127494</a><br>
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bxs-envelope'></i>
+                        <p class="contact-info">
+                            <a href="mailto:info@miladconstruction.com">info@miladconstruction.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container1">
+                <div class="contact-form" id="contactform">
+                    <h2>Get In Touch</h2>
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="country">Select Country:</label>
+                        <select id="country" name="country" required>
+                            <option value=""></option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="UAE">UAE</option>
+                        </select>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button id="button" type="submit">Request a Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -267,31 +303,47 @@
             </span>
         </div>
     </footer>
-    
-    <script>
-         function handleSubmit(event) {
-            event.preventDefault(); // Prevent the form from submitting in the traditional way
-
-            const form = document.getElementById('contactForm');
-            const name = encodeURIComponent(form.name.value);
-            const email = encodeURIComponent(form.email.value);
-            const country = encodeURIComponent(form.country.value);
-            const message = encodeURIComponent(form.message.value);
-
-            // Create the mailto link with pre-filled content
-            const mailtoLink = `mailto:info@miladconstruction.com?subject=Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0ACountry: ${country}%0AMessage: ${message}`;
-
-            // Open the mailto link in the user's default email client
-            window.location.href = mailtoLink;
-        }
-    </script>
 
 
     <!--========== SCROLL UP ==========-->
     <a href="" class="scrollup" id="scroll-up">
-        <i class='bx bx-chevrons-up'></i>
+        <i class='bx bx-chevrons-up'>Back to top</i>
     </a>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('hero-video');
+    var audioToggleButton = document.getElementById('audio-toggle');
 
+    if (video) {
+        if (window.innerWidth <= 768) { 
+            // For small screens, mute the video and show the toggle button
+            video.muted = true;
+            audioToggleButton.style.display = 'block';
+
+            audioToggleButton.addEventListener('click', function() {
+                if (video.muted) {
+                    video.muted = false;
+                    audioToggleButton.textContent = 'Mute';
+                } else {
+                    video.muted = true;
+                    audioToggleButton.textContent = 'Unmute';
+                }
+            });
+        } else {
+            // For large screens, unmute the video
+            video.muted = false;
+        }
+
+        // Attempt to autoplay the video
+        video.play().catch(function(error) {
+            console.log('Autoplay failed:', error);
+        });
+    }
+});
+
+
+
+    </script>
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
 

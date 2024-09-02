@@ -1,3 +1,16 @@
+// navigation bar mobile view=====================
+
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
+
+
+
 // ==========================counting numbers==========================
 
 
@@ -96,83 +109,62 @@ const sr = ScrollReveal({
 });
 
 // Adjust these selectors based on your updated HTML
-sr.reveal('.home-title, .popular-container, .subscribe-container, .footer-container');
-sr.reveal('.home-description, .footer-info', { delay: 500 });
+sr.reveal('.hero-text, .popular-container, .subscribe-container, .footer-container');
+sr.reveal('.home-description,.hero-logo,.footer-info', { delay: 500 });
 sr.reveal('.home-search', { delay: 600 });
 sr.reveal('.home-value', { delay: 700 });
-sr.reveal('.home-images', { delay: 800, origin: 'bottom' });
+sr.reveal('.hero-image', { delay: 800, origin: 'bottom' });
 sr.reveal('.logos-img', { interval: 100 });
-sr.reveal('.value-images, .contact-content', { origin: 'left' });
+sr.reveal(' .value-images, .contact-content', { origin: 'left' });
 sr.reveal('.value-content, .contact-images', { origin: 'right' });
 
 
+// vdeo-------------------------------------
 
-
-// ==========================vdeo=============================
-document.getElementById('play-button').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('hero-video');
+  const playButton = document.getElementById('play-button');
   const volumeSlider = document.getElementById('volume-slider');
+  const isMobile = window.innerWidth <= 768;
 
-  if (video.paused) {
-      video.muted = false;  // Unmute the video
-      video.play();         // Play the video
-      this.style.display = 'none';  // Hide the play button
-      volumeSlider.style.display = 'block';  // Show the volume slider
+  // Autoplay video with sound on large screens
+  if (!isMobile) {
+      video.muted = false; // Unmute the video for large screens
+      video.autoplay = true;
+      video.play();
   } else {
-      video.pause();        // Pause the video if it's playing
+      video.muted = true; // Keep it muted on mobile initially
+      playButton.style.display = 'block'; // Show play button on mobile
   }
+
+  playButton.addEventListener('click', function() {
+      if (video.paused) {
+          video.muted = false; // Unmute the video on click
+          video.play(); // Play the video
+          playButton.style.display = 'none'; // Hide play button
+          volumeSlider.style.display = 'block'; // Show volume slider on mobile
+      } else {
+          video.pause(); // Pause the video if it's playing
+      }
+  });
+
+  volumeSlider.addEventListener('input', function() {
+      video.volume = this.value; // Adjust the video volume
+  });
 });
 
-document.getElementById('volume-slider').addEventListener('input', function() {
-  const video = document.getElementById('hero-video');
-  video.volume = this.value;  // Adjust the video volume
-});
 
-// navigation bar mobile view=====================
 
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'flex'
-}
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'none'
-}
 
 
 // CONTACT FORM MESSAGE GENERATER
-const nameField = document.getElementById('name');
-const emailField = document.getElementById('email');
-const messageField = document.getElementById('message');
-const sendBtn = document.getElementById('send-btn');
-
-// Function to enable the button if all fields are filled
-function enableButton() {
-    if (nameField.value && emailField.value && messageField.value) {
-        sendBtn.disabled = false;
-    } else {
-        sendBtn.disabled = true;
-    }
-}
-
-// Add event listeners to fields
-nameField.addEventListener('input', enableButton);
-emailField.addEventListener('input', enableButton);
-messageField.addEventListener('input', enableButton);
-
-// Handle button click
-sendBtn.addEventListener('click', function() {
-    const recipientEmail = "@miladconstruction.com"; // Replace with the actual recipient's email address
-    const subject = encodeURIComponent("Inquiry from Website");
-    const name = encodeURIComponent(nameField.value);
-    const email = encodeURIComponent(emailField.value);
-    const message = encodeURIComponent(messageField.value);
-
-    const body = encodeURIComponent(`Hello,\n\nMy name is ${name}.\nMy email is ${email}.\n\n${message}`);
-
-    // Construct the mailto link with the prefilled subject and body
-    const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
-
-    // Open the mailto link to trigger the email client with the prefilled message
-    window.location.href = mailtoLink;
-});
+function sendMail(){ 
+  let params = {
+  name : document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  country: document.getElementById("country").value,
+  message: document.getElementById("message").value,
+  }
+  
+  emailjs.send("service_72quqba","template_kcy9yn8",params).then(alert("Email Sent!!"))
+  }

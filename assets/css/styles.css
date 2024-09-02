@@ -275,56 +275,173 @@ nav li:first-child {
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
 
-/*=============== HOME ===============*/
-.home {
-  position: relative;
-  padding-top: 4rem;
-  padding-bottom: 0; /* Adjust if needed */
-  background: url('assets/img/Miladcompanylogo3.jpg') no-repeat center center;
-  background-size: cover; /* Ensure the background image covers the section */
-  background-position: center; /* Center the background image */
+
+/* =========home */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            position: relative;
+            background: var(--text-color-light);
+        }
+
+        .hero-container {
+            height: 580px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            
+        }
+
+        .hero-text {
+            width: 45%;
+            text-align: left;
+            margin-left: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            color: var(--title-color);
+            margin-top: 160px;
+        }
+
+        .hero-text p {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-logo {
+            width: 45%;
+            text-align: right;
+            margin-right: 60px;
+        }
+
+        .hero-logo img {
+            max-height: 250px;
+            width: auto;
+            border-radius: 250px;
+            margin-top: 80px;
+        }
+
+        .hero-image {
+            width: 800px;
+            height: 400px;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+
+        /* Medium Screens */
+      /* Medium Screens */
+@media (max-width: 848px) {
+    .hero {
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+               justify-content: center;
+          height:auto;
+            position: relative;
+            background: var(--text-color-light);
+        }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-logo {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between the logo and text */
+    }
+
+    .hero-logo img {
+        height: 200px;
+        margin-top: 10px;
+        margin-bottom: 10px; /* Space between the logo and text */
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 20px; /* Space between the text and hero image */
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .hero-image {
+        width: 90%;
+        height: auto;
+        /* margin-top: 10px; */
+    }
 }
 
-.home-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay color and opacity */
-  z-index: 1; /* Ensure the overlay sits above the background image */
-}
 
-.home-container {
-  position: relative;
-  z-index: 2; /* Ensure the content sits above the overlay */
-  padding-top: 4rem;
-  display: flex; /* Use flexbox to center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center; /* Center text inside */
-  height: 100vh; /* Make sure the container takes full viewport height */
-  row-gap: 3.5rem;
-}
+  /* Small Screens */
+@media only screen and (max-width: 767px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:auto; /* Adjusted for better responsiveness */
+        width: 100%;  
+        position: relative;
+        background: var(--text-color-light);
+    }
 
-.home-title {
-  display: none;
-  /* color: #fff;
-  font-size: var(--biggest-font-size);
-  line-height: 120%; */
-  margin-bottom: 2rem; /* Increase space below the title */
-}
+    .hero-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: auto;
+    }
 
-/* For large screens */
-@media screen and (min-width: 1023px) {
-  .home-container {
-    column-gap: 2rem;
-    height: 100vh; /* Keep full viewport height for large screens */
-  }
+    .hero-logo {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
 
-  .home-title {
-    margin-bottom: 2rem; /* Ensure consistent spacing */
-  }
+    .hero-logo img {
+        max-height: 90px; /* Adjusted for better fit */
+        margin-top:45px;
+      
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 24px; /* Adjusted font size for better readability */
+        margin-top: -40px;
+    }
+
+    .hero-image {
+        width: 90%; /* Increased width for better fit on smaller screens */
+        height: auto;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        
+    }
 }
 
 
@@ -351,6 +468,7 @@ nav li:first-child {
   display: none;
 }
 
+/*=============== POPULAR / service ===============*/
 /*=============== POPULAR / service ===============*/
 .popular-container {
   padding: 1rem 0 5rem;
@@ -438,30 +556,37 @@ nav li:first-child {
 }
 /*=============== VALUE / about ===============*/
 /* Section Heading */
-.section-heading {
-  text-align: center;
-  margin-bottom: 1rem; /* Adjust as needed */
-  font-size: 22px;
-  margin-top: 25px;
+/* Section Title Alignment */
+.section-title {
+  text-align: left; /* Align text to the left */
+  margin: 0; 
   
 }
 
-.section-subtitle {
-  font-size: var(--font-large); /* Base size for smaller screens */
-  font-weight: bold;
-  color:var(--second-color); /* Adjust color as needed */
-  display: block;
-  margin-bottom: 1rem; /* Space between subtitle and container */
+/* Section Heading */
+.section-heading {
+  text-align: center; 
+  margin-bottom: 1rem; 
+  font-size: 22px;
+  margin-top: 25px;
 }
 
+.section-subtitle {
+  font-size: var(--font-large); 
+  font-weight: bold;
+  color: var(--second-color); 
+  display: block;
+  margin-bottom: 1rem; 
+  text-align:center;
+}
 /* Large screens */
 @media screen and (min-width: 1023px) {
   .section-subtitle {
-    font-size: 40px; /* Increase size for large screens */
-    font-weight: bold; /* Increase font weight */
-    text-align: center; /* Center the subtitle */
-    margin-top: -6rem; /* Move the subtitle up */
-    margin-bottom: 2rem; /* Add margin-bottom to provide space below the subtitle */
+    font-size: 40px; 
+    font-weight: bold;
+    text-align: center;
+    margin-top: -6rem; 
+    margin-bottom: 2rem;
   }
 
   .value-container {
@@ -504,9 +629,9 @@ nav li:first-child {
 .value-description {
   font-size: var(--font-medium);
   margin-bottom: 2rem;
-  text-align: justify; /* Ensures text alignment across the width */
-  line-height: 2rem; /* Consistent line-height for readability */
-  word-wrap: break-word; /* Prevents text from overflowing */
+  text-align: justify; 
+  line-height: 2rem; 
+  word-wrap: break-word; 
 }
 
 .value-data .section-title {
@@ -520,7 +645,7 @@ nav li:first-child {
     width: auto;
     /* height: 570px;border-radius: 258px 258px 16px 16px; */
   }
-  .value-container{
+  .value-container {
     margin-top: 0.5px;
   }
   .value-img {
@@ -530,6 +655,7 @@ nav li:first-child {
   }
 }
 
+/* ============================================================== */
 
 /* client logos */
 .logo-grid1 {
@@ -546,7 +672,7 @@ nav li:first-child {
 }
 
 .logo-grid1 img {
-  max-width: 100%; /* Ensure images don't exceed their container */
+  max-width: 100%; 
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove extra space below images */
   margin: 0 auto; /* Center images horizontally */
@@ -1102,13 +1228,13 @@ color: var(--second-color);
   position: fixed;
 right: 1rem;
 bottom: 8rem;
-background-color: var(--container-color);
+background-color:var(--second-color);
 box-shadow: 0 8px 12px hsla(228, 66%, 45%, .1);
 display: inline-flex;
 padding: .35rem;
 border-radius: .25rem;
-color: var(--title-color);
-font-size: 1.25rem;
+color: black;
+font-size: 14px;
 z-index: var(--z-tooltip);
 transition: .3s;
 }
@@ -1683,13 +1809,18 @@ height: 280px;
   text-align: center;
   padding: 40px 20px;
   background-color: white;
+  margin-top: 30px;
 }
-
 .services-ksa-title {
   font-size: 2rem;
   color: var(--second-color);
   margin-bottom: 10px;
+  background-color: var(--title-color); /* Add your desired background color here */
+  padding: 10px 20px; /* Add padding to the text */
+  display: inline-block; /* Make the background color fit the text */
+  border-radius: 5px; /* Optional: Add rounded corners */
 }
+
 
 
 /* service section vdeo==================== */
@@ -1784,37 +1915,24 @@ height: 280px;
       padding: 0.5rem 1rem;
   }
 }
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 3;
-  transition: background-color 0.3s ease;
-}
-
-.play-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.play-button svg {
-  fill: white;
-}
-.volume-slider {
+.audio-toggle {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  z-index: 3;
+  left: 20px;
+  padding: 10px 20px;
+  background-color:var(--second-color);
+  color:white;
+  border: none;
   cursor: pointer;
-  display: none; /* Initially hidden */
+  font-size: 16px;
+  z-index: 10;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .audio-toggle {
+      display: block; /* Show the button only on small screens */
+  }
 }
