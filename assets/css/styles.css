@@ -532,7 +532,12 @@ nav li:first-child {
 .swiper-button-next::after {
   content: '';
 }
-
+.swiper-button-prev:hover ,
+.swiper-button-next:hover{
+  color: white;
+  border: var(--title-color);
+  background-color: var(--title-color);
+}
 .swiper-button-prev,
 .swiper-button-next {
   top: initial;
@@ -541,18 +546,18 @@ nav li:first-child {
   height: initial;
   background-color: var(--container-color);
   border: 2px solid var(--text-color-light);
-  padding: 6px;
+  padding: 12px;
   border-radius: .5rem;
-  font-size: 1.5rem;
+  font-size: 32px;
   color: var(--first-color);
 }
 
 .swiper-button-prev {
-  left: calc(50% - 3rem);
+  left: calc(50% - 4rem);
 }
 
 .swiper-button-next {
-  right: calc(50% - 3rem);
+  right: calc(50% - 4rem);
 }
 /*=============== VALUE / about ===============*/
 /* Section Heading */
