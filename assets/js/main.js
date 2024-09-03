@@ -158,13 +158,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // CONTACT FORM MESSAGE GENERATER
-function sendMail(){ 
+function sendMail(event) { 
+  event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
   let params = {
-  name : document.getElementById("name").value,
-  email: document.getElementById("email").value,
-  country: document.getElementById("country").value,
-  message: document.getElementById("message").value,
-  }
-  
-  emailjs.send("service_72quqba","template_kcy9yn8",params).then(alert("Email Sent!!"))
-  }
+    name: document.getElementById("name").value,  // Matches {{name}} in the template
+    email: document.getElementById("email").value, // Matches {{email}} in the template
+    country: document.getElementById("country").value, // Matches {{country}} in the template
+    message: document.getElementById("message").value, // Matches {{message}} in the template
+  };
+
+  emailjs.send("service_72quqba", "template_kcy9yn8", params)
+    .then(function(response) {
+      // Hide the form and show the thank you message
+      document.getElementById("contactform").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    }, function(error) {
+      alert("Failed to send email. Please try again later.");
+      console.error("EmailJS error: ", error);
+    });
+}
+
+// Attach the event listener directly to the form submission
+document.getElementById("contactForm").addEventListener("submit", sendMail);

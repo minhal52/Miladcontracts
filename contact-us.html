@@ -98,7 +98,6 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                 </div>
             </div>
         </div>
-  
         </main>
     <!-- ============================================== -->
 <!--  Text or Image -->
@@ -151,7 +150,33 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
     <a href="" class="scrollup" id="scroll-up">
         <i class='bx bx-chevrons-up'></i>
     </a>
+<script>
+    // CONTACT FORM MESSAGE GENERATER
+function sendMail(event) { 
+  event.preventDefault(); // Prevent the form from submitting and refreshing the page
 
+  let params = {
+    name: document.getElementById("name").value,  // Matches {{name}} in the template
+    email: document.getElementById("email").value, // Matches {{email}} in the template
+    country: document.getElementById("country").value, // Matches {{country}} in the template
+    message: document.getElementById("message").value, // Matches {{message}} in the template
+  };
+
+  emailjs.send("service_72quqba", "template_kcy9yn8", params)
+    .then(function(response) {
+      // Hide the form and show the thank you message
+      document.getElementById("contactform").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    }, function(error) {
+      alert("Failed to send email. Please try again later.");
+      console.error("EmailJS error: ", error);
+    });
+}
+
+// Attach the event listener directly to the form submission
+document.getElementById("contactForm").addEventListener("submit", sendMail);
+
+</script>
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
 
@@ -160,13 +185,7 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-    <script>
-        document.getElementById('button').addEventListener('click', function() {
-          window.location.href = 'mailto:@miladconstruction.com?subject=Subject&body=Message%20body';
-        });
-      </script>
-      
-    
+     
 </body>
 
 </html>
