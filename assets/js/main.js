@@ -120,38 +120,45 @@ sr.reveal('.value-content, .contact-images', { origin: 'right' });
 
 
 // vdeo-------------------------------------
-
 document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('hero-video');
-  const playButton = document.getElementById('play-button');
-  const volumeSlider = document.getElementById('volume-slider');
+  const audioToggle = document.getElementById('audio-toggle');
   const isMobile = window.innerWidth <= 768;
 
-  // Autoplay video with sound on large screens
-  if (!isMobile) {
-      video.muted = false; // Unmute the video for large screens
-      video.autoplay = true;
-      video.play();
-  } else {
-      video.muted = true; // Keep it muted on mobile initially
-      playButton.style.display = 'block'; // Show play button on mobile
-  }
+  // Set the initial muted state based on screen size
+  video.muted = isMobile; // Mute on mobile, unmute on larger screens
+  video.play();
 
-  playButton.addEventListener('click', function() {
-      if (video.paused) {
-          video.muted = false; // Unmute the video on click
-          video.play(); // Play the video
-          playButton.style.display = 'none'; // Hide play button
-          volumeSlider.style.display = 'block'; // Show volume slider on mobile
+  // Set the initial text of the audio toggle button
+  audioToggle.textContent = video.muted ? 'Unmute' : 'Mute';
+
+  // Show the audio toggle button
+  audioToggle.style.display = 'block';
+
+  // Handle the mute/unmute functionality
+  audioToggle.addEventListener('click', function() {
+      if (video.muted) {
+          video.muted = false;
+          audioToggle.textContent = 'Mute';
       } else {
-          video.pause(); // Pause the video if it's playing
+          video.muted = true;
+          audioToggle.textContent = 'Unmute';
       }
   });
 
-  volumeSlider.addEventListener('input', function() {
-      video.volume = this.value; // Adjust the video volume
+  // Adjust the video mute state when resizing the window
+  window.addEventListener('resize', function() {
+      if (window.innerWidth <= 768) {
+          video.muted = true;
+          audioToggle.textContent = 'Unmute';
+      } else {
+          video.muted = false;
+          audioToggle.textContent = 'Mute';
+      }
   });
 });
+
+
 
 
 
