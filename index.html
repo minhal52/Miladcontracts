@@ -117,22 +117,21 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
    
 </div>
 
-        <!--==================== POPULAR / services we offer====================-->
-        <section class="service-service-hero-section">
-            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto">
-                <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
-            </video>
-            
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to Milad Constructors</h1>
-                <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
-                <a href="ourservices.html" class="hero-button">Explore Our Services</a>
-            </div>
-        
-            <!-- Audio Control Button -->
-            <button id="audio-toggle" class="audio-toggle">Unmute</button>
-        </section>
-        
+    <!--==================== POPULAR / services we offer====================-->
+<section class="service-service-hero-section">
+    <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto">
+        <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
+    </video>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">Welcome to Milad Constructors</h1>
+        <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
+        <a href="ourservices.html" class="hero-button">Explore Our Services</a>
+    </div>
+
+    <!-- Audio Control Button -->
+    <button id="audio-toggle" class="audio-toggle">Unmute</button>
+</section>
         <!-- swiper container -->
         
         <div class="popular-container swiper">
@@ -343,34 +342,47 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
         <i class='bx bx-chevrons-up'>Back to top</i>
     </a>
     <script>
+
 document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('hero-video');
-    var audioToggleButton = document.getElementById('audio-toggle');
+    const video = document.getElementById('hero-video');
+    const audioToggle = document.getElementById('audio-toggle');
 
+    // Ensure the video plays automatically with audio muted initially
     if (video) {
-        if (window.innerWidth <= 768) { 
-            // For small screens, mute the video and show the toggle button
-            video.muted = true;
-            audioToggleButton.style.display = 'block';
+        video.muted = true; // Start with audio muted
+        video.play().catch(error => {
+            console.error('Error playing video:', error);
+        });
 
-            audioToggleButton.addEventListener('click', function() {
+        // Set the initial text of the audio toggle button to "Unmute"
+        if (audioToggle) {
+            audioToggle.textContent = 'Unmute';
+
+            // Handle the mute/unmute functionality
+            audioToggle.addEventListener('click', function() {
                 if (video.muted) {
                     video.muted = false;
-                    audioToggleButton.textContent = 'Mute';
+                    audioToggle.textContent = 'Mute';
                 } else {
                     video.muted = true;
-                    audioToggleButton.textContent = 'Unmute';
+                    audioToggle.textContent = 'Unmute';
                 }
             });
         } else {
-            // For large screens, unmute the video
-            video.muted = false;
+            console.error('Audio toggle button not found');
         }
 
-        // Attempt to autoplay the video
-        video.play().catch(function(error) {
-            console.log('Autoplay failed:', error);
+        // Check if the video is actually playing
+        video.addEventListener('playing', () => {
+            console.log('Video is playing');
         });
+
+        // Handle video error
+        video.addEventListener('error', (e) => {
+            console.error('Video error:', e);
+        });
+    } else {
+        console.error('Video element not found');
     }
 });
 

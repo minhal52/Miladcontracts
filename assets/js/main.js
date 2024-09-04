@@ -119,40 +119,40 @@ sr.reveal(' .value-images, .contact-content', { origin: 'left' });
 sr.reveal('.value-content, .contact-images', { origin: 'right' });
 
 
-// vdeo-------------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-  const video = document.getElementById('hero-video');
-  const audioToggle = document.getElementById('audio-toggle');
+// // vdeo-------------------------------------
+// document.addEventListener('DOMContentLoaded', function() {
+//   const video = document.getElementById('hero-video');
+//   const audioToggle = document.getElementById('audio-toggle');
 
-  // Ensure the video plays automatically with audio muted initially
-  video.muted = true; // Start with audio muted
-  video.play().catch(error => {
-    console.error('Error playing video:', error);
-  });
+//   // Ensure the video plays automatically with audio muted initially
+//   video.muted = true; // Start with audio muted
+//   video.play().catch(error => {
+//     console.error('Error playing video:', error);
+//   });
 
-  // Set the initial text of the audio toggle button to "Unmute"
-  audioToggle.textContent = 'Unmute';
+//   // Set the initial text of the audio toggle button to "Unmute"
+//   audioToggle.textContent = 'Unmute';
 
-  // Handle the mute/unmute functionality
-  audioToggle.addEventListener('click', function() {
-      if (video.muted) {
-          video.muted = false;
-          audioToggle.textContent = 'Mute';
-      } else {
-          video.muted = true;
-          audioToggle.textContent = 'Unmute';
-      }
-  });
+//   // Handle the mute/unmute functionality
+//   audioToggle.addEventListener('click', function() {
+//       if (video.muted) {
+//           video.muted = false;
+//           audioToggle.textContent = 'Mute';
+//       } else {
+//           video.muted = true;
+//           audioToggle.textContent = 'Unmute';
+//       }
+//   });
 
-  // Check if the video is actually playing
-  video.addEventListener('playing', () => {
-    console.log('Video is playing');
-  });
+//   // Check if the video is actually playing
+//   video.addEventListener('playing', () => {
+//     console.log('Video is playing');
+//   });
 
-  video.addEventListener('error', (e) => {
-    console.error('Video error:', e);
-  });
-});
+//   video.addEventListener('error', (e) => {
+//     console.error('Video error:', e);
+//   });
+// });
 
 
 
