@@ -124,15 +124,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('hero-video');
   const audioToggle = document.getElementById('audio-toggle');
 
-  // Ensure the video plays automatically with audio on
-  video.muted = false; // Start with audio on
+  // Ensure the video plays automatically with audio muted
+  video.muted = true; // Start with audio muted
   video.play();
 
-  // Set the initial text of the audio toggle button to "Mute"
-  audioToggle.textContent = 'Mute';
-
-  // Show the audio toggle button
-  audioToggle.style.display = 'block';
+  // Set the initial text of the audio toggle button to "Unmute"
+  audioToggle.textContent = 'Unmute';
 
   // Handle the mute/unmute functionality
   audioToggle.addEventListener('click', function() {
@@ -144,7 +141,17 @@ document.addEventListener('DOMContentLoaded', function() {
           audioToggle.textContent = 'Unmute';
       }
   });
+
+  // Check if the video is actually playing
+  video.addEventListener('playing', () => {
+    console.log('Video is playing');
+  });
+
+  video.addEventListener('error', (e) => {
+    console.error('Video error:', e);
+  });
 });
+
 
 
 
