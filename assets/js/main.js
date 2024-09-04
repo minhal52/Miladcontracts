@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const audioToggle = document.getElementById('audio-toggle');
   const isMobile = window.innerWidth <= 768;
 
-  // Set the initial muted state based on screen size
-  video.muted = isMobile; // Mute on mobile, unmute on larger screens
+  // Ensure the video plays automatically with audio on
+  video.muted = false;
   video.play();
 
-  // Set the initial text of the audio toggle button
-  audioToggle.textContent = video.muted ? 'Unmute' : 'Mute';
+  // Set the initial text of the audio toggle button to "Mute"
+  audioToggle.textContent = 'Mute';
 
   // Show the audio toggle button
   audioToggle.style.display = 'block';
@@ -145,19 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
           audioToggle.textContent = 'Unmute';
       }
   });
-
-  // Adjust the video mute state when resizing the window
-  window.addEventListener('resize', function() {
-      if (window.innerWidth <= 768) {
-          video.muted = true;
-          audioToggle.textContent = 'Unmute';
-      } else {
-          video.muted = false;
-          audioToggle.textContent = 'Mute';
-      }
-  });
 });
-
 
 
 
