@@ -123,10 +123,9 @@ sr.reveal('.value-content, .contact-images', { origin: 'right' });
 document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('hero-video');
   const audioToggle = document.getElementById('audio-toggle');
-  const isMobile = window.innerWidth <= 768;
 
   // Ensure the video plays automatically with audio on
-  video.muted = false;
+  video.muted = false; // Start with audio on
   video.play();
 
   // Set the initial text of the audio toggle button to "Mute"
