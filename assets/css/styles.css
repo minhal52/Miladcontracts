@@ -986,46 +986,6 @@ font-size: 10px;
 color: var(--second-color);
 }
 }  
-
-
-
-/* -=================================== */
-.geeks {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.1; /* Adjust the opacity to make the watermark subtle */
-  font-size: 50px; /* Adjust the size as needed */
-  color: black; /* Or use an image */
-  pointer-events: none; /* Ensure it doesn't interfere with any interactions */
-  z-index: 1000; /* Ensure it is on top of other elements */
-  text-align: center;
-}
-
-/* To use an image as a  */
-.geeks img {
-  width: auto;
-  height: auto;
-  opacity: 2;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  background: none;
-}
-
-/* Mobile screens adjustment */
-@media (max-width: 600px) {
-  .geeks {
-    font-size: 10px; /* Smaller font size for mobile */
-    opacity: 0.50; /* Slightly increase opacity if needed */
-  }
-
-  .geeks img {
-    width: 70%; /* Adjust the size of the image for mobile */
-    height: auto;
-  }
-}
-
 /*=============== FOOTER ===============*/
 /* General styles for the footer */
 .footer-container {
