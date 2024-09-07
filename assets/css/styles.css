@@ -97,30 +97,6 @@ button {
   border: none;
 }
 
-/*=============== THEME ===============*/
-.change-theme{
-  font-size:  1.25rem;
-  color:   #fff;
-  cursor : pointer;
-  transition:   .3s;
-}
-
-.change-theme:hover{
-    color: var(--first-color);
-}
-
-/*========== Variables Dark theme ==========*/
-body.dark-theme{
-  --first-color: hsl(228, 66%, 62%);
-  --second-color: hsl(25, 57%, 54%);
-  --title-color: hsl(228, 8%, 95%);
-  --text-color: hsl(228, 8%, 70%);
-  /* --text-color-light: hsl(228, 12%, 75%); */
-  --border-color: hsl(228, 16%, 14%);
-  --body-color: hsl(228,12%,8%);
-  --container-color:  hsl(228, 16%, 14%);
-}
-
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -274,9 +250,11 @@ nav li:first-child {
   color: #fff;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
+.favicon img{
+  width: 100px;
+}
 
-
-/* =========home */
+/* =========home====================== */
         .hero {
             display: flex;
             flex-direction: column;
@@ -336,8 +314,6 @@ nav li:first-child {
             border-radius: 25px;
             margin-top: 20px;
         }
-
-        /* Medium Screens */
       /* Medium Screens */
 @media (max-width: 848px) {
     .hero {
@@ -468,7 +444,213 @@ nav li:first-child {
   display: none;
 }
 
-/*=============== POPULAR / service ===============*/
+
+/* ==================Counting numbers==================== */
+.container2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: auto; /* This will push the container to the bottom of its parent */
+  margin-left: 10px; /* Optional: Set a default left margin for smaller screens */
+  margin-right: 10px; /* Optional: Set a default right margin for smaller screens */
+}
+
+.counter-numbers {
+  color: var(--title-color);
+  font-size: 40px;
+  text-align: center;
+}
+
+.container2 p {
+  margin-top: 5px; /* Adjust the margin-top value */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--second-color);
+}
+
+/* For large screens (e.g., laptops) */
+@media (min-width: 1024px) {
+  .container2 {
+    justify-content: space-between;
+    margin-left: 40px; /* Add left margin for large screens */
+    margin-right: 40px; /* Add right margin for large screens */
+    margin-bottom: 2px;
+  }
+
+  .counter-numbers {
+    font-size: 50px;
+  }
+
+  .container2 p {
+    font-size: 28px;
+  }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container2 {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .counter-numbers {
+    font-size: 45px;
+  }
+
+  .container2 p {
+    font-size: 26px;
+  }
+}
+
+/* For small screens (e.g., mobile phones) */
+@media (max-width: 767px) {
+  .container2 {
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .counter-numbers {
+    font-size: 35px;
+  }
+
+  .container2 p {
+    font-size: 22px;
+  }
+}
+
+/* Specific for iPhone 13, 14, and 15 */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .container2 {
+    flex-direction: column;
+    /* margin-bottom: 0px; */
+  }
+
+  .counter-numbers {
+    font-size: 30px;
+  }
+
+  .container2 p {
+    font-size: 20px;
+  }
+}
+/* ==============service============= */
+
+/* service section vdeo==================== */
+.service-service-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  padding: 1rem 2rem;
+  background-color: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero-title {
+      font-size: 2.5rem;
+  }
+
+  .hero-description {
+      font-size: 1.25rem;
+  }
+
+  .hero-button {
+      font-size: 0.875rem;
+      padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+      font-size: 2rem;
+  }
+
+  .hero-description {
+      font-size: 1rem;
+  }
+
+  .hero-button {
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 1.5rem;
+  }
+
+  .hero-description {
+      font-size: 0.875rem;
+  }
+
+  .hero-button {
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+  }
+}
+.audio-toggle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color:var(--second-color);
+  color:white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .audio-toggle {
+      display: block; /* Show the button only on small screens */
+  }
+}
 /*=============== POPULAR / service ===============*/
 .popular-container {
   padding: 1rem 0 5rem;
@@ -507,17 +689,18 @@ nav li:first-child {
   margin-bottom: .25rem;
 }
 
-.popular-detail span {
+/* .popular-detail span {
   color: var(--second-color);
-}
+} */
 
-.popular-title {
+/* .popular-title {
   font-size: var(--h3-font-size);
   margin-bottom: .75rem;
-}
+} */
 
 .popular-description {
   /* font-size: var(--medium-font-size); */
+  margin-top: 1rem;
   font-size: 18px;
   font-weight:var(--font-bold);
   align-items: center;
@@ -1096,22 +1279,21 @@ color: var(--second-color);
   gap: 0.5rem; /* Adjust space between items if needed */
 }
 
-.footer-copy,
-.footer-privacy a {
+.footer-copy {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
 }
 
-.footer-privacy {
+/* .footer-privacy {
   display: flex;
   gap: 1rem; /* Adjust space between links if needed */
-}
+/* } */
 
 .footer-privacy a {
   color: var(--text-color);
   text-decoration: none; /* Optional: removes underline from links */
-}
+} */
 
 /* Adjust the footer-copy margin to move it a little down */
 .footer-copy {
@@ -1161,19 +1343,11 @@ color: var(--second-color);
     width: 100%; /* Ensure the grid takes up the full width of its container */
   }
   
-  .footer-social {
-    display: flex;
-    justify-content: center; /* Center social icons */
-    align-items: center;
-    width: 100%; /* Ensure social icons container takes up the full width */
-    gap: 10px; /* Optional: Add some space between the social icons */
-    margin-top: 1rem; /* Optional: Add space above the social links */
-  }
 }
 
 
 /* ============================================================================================= */
-    /* Base styles */
+   
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
   width: .6rem;
@@ -1236,25 +1410,6 @@ transition: .3s;
 
 
 @media screen and (max-width: 320px){
-  /* .nav-menu{
-    padding: 1.3rem 1.5rem;
-  } */
-
-  .home-values{
-    column-gap: 1rem;
-  }
-  .home-img{
-    width: 220px;
-    height: 280px;
-  }
-
-  .home-orbe{
-    width: 240px;
-    height: 260px;
-  }
-  /* .logos-container{
-    gap: 2rem 1rem;
-  } */
 
   .popular-card{
     width: 230px;
@@ -1265,14 +1420,9 @@ transition: .3s;
     width: 220px;
     height: 260px;
   }
-  .value-orbe,
-  .contact-orbe{
+  .value-orbe{
 width: 236px;
 height: 280px;
-  }
-
-  .subscribe-container{
-    padding: 2rem 1.5rem;
   }
 
   .footer-content{
@@ -1285,13 +1435,6 @@ height: 280px;
 
 /* For medium devices */
 @media screen and (min-width: 567px){
-  /* .nav-menu{
-    width: 342px;
-  } */
-
-  .home-search{
-    width: 412px;
-  }
 
   .contact-card{
     grid-template-columns: repeat(2, 192px);
@@ -1303,42 +1446,12 @@ height: 280px;
 }
 
 @media screen and (min-width:767px){
-  .home-container{
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 2rem;
-  }
-
-  .home-orbe{
-    align-self: flex-end;
-  }
-
-  .home-data{
-    padding-bottom: 2rem;
-  }
-
-  .logos-container{
-    grid-template-columns: repeat(4, max-content);
-    justify-content: center;
-  }
-
   .value-container,
   .contact-container{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
 
   }
-  
-  .contact-images{
-    order: 1;
-  }
-
-  .contact-card{
-    justify-content: initial;
-  }
-  .subscribe-container{
-    padding: 3rem 13rem;
-  }
-
   .footer-container{
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
@@ -1354,11 +1467,7 @@ height: 280px;
   .section-title{
     font-size: 2.25rem;
   }
-  /* .section-subtitle{
-    font-size:32px;
-    font-weight: var(--font-medium);
-  } */
-
+  
   .nav{
     height: calc (var(--header-height) + 1.5rem);
   }
@@ -1393,13 +1502,8 @@ height: 280px;
     font-weight: var(--font-medium);
   }
 
-  .change-theme{
-    margin: 0 3rem;
-    color: var(--text-color-light);
-  }
-
   .scroll-header .nav-link,
-  .scroll-header .change-theme{
+  .scroll-header{
     color: var(--text-color);
   }
 
@@ -1407,11 +1511,6 @@ height: 280px;
     color: var(--first-color);
   }
 
- 
-
-  .logos-img img{
-    height: 100px;
-  }
 
   .popular-container{
     padding-top: 3rem;
@@ -1432,34 +1531,11 @@ height: 280px;
  }
 
 
- .value-description,
- .contact-description{
+ .value-description{
   font-size: var(--normal-font-size);
   margin-bottom: 2.5rem;
  }
 
- 
- .contact-card{
-  grid-template-columns: repeat(2, 200px);
- }
- .contact-card-box{
-  padding: 28px 1.5rem 1.5rem;
-
- }
- .subscribe-container{
-  padding: 4rem 10rem 4.5rem;
-  border-radius: 2rem;
-   border: 12px solid var(--first-color-light);
- }
- .subscribe-title{
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
- }
-
- .subscribe-description{
-  font-size: var(--normal-font-size);
-  padding: 0 8rem;
- }
 
  .footer-content{
   grid-template-columns: repeat(4, max-content);
@@ -1488,12 +1564,7 @@ height: 280px;
   .container{
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .home-container{
-    column-gap: 4rem;
-  }
-}
+  }}
 
 /* For 2K & 4K resolutions */
 @media screen and (min-width :2048px){
@@ -1508,97 +1579,6 @@ height: 280px;
 }
 
 
-/* ==================Counting numbers==================== */
-.container2 {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-top: auto; /* This will push the container to the bottom of its parent */
-  margin-left: 10px; /* Optional: Set a default left margin for smaller screens */
-  margin-right: 10px; /* Optional: Set a default right margin for smaller screens */
-}
-
-.counter-numbers {
-  color: var(--title-color);
-  font-size: 40px;
-  text-align: center;
-}
-
-.container2 p {
-  margin-top: 5px; /* Adjust the margin-top value */
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  color: var(--second-color);
-}
-
-/* For large screens (e.g., laptops) */
-@media (min-width: 1024px) {
-  .container2 {
-    justify-content: space-between;
-    margin-left: 40px; /* Add left margin for large screens */
-    margin-right: 40px; /* Add right margin for large screens */
-    margin-bottom: 2px;
-  }
-
-  .counter-numbers {
-    font-size: 50px;
-  }
-
-  .container2 p {
-    font-size: 28px;
-  }
-}
-
-/* For medium screens (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container2 {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .counter-numbers {
-    font-size: 45px;
-  }
-
-  .container2 p {
-    font-size: 26px;
-  }
-}
-
-/* For small screens (e.g., mobile phones) */
-@media (max-width: 767px) {
-  .container2 {
-    flex-direction: column;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-
-  .counter-numbers {
-    font-size: 35px;
-  }
-
-  .container2 p {
-    font-size: 22px;
-  }
-}
-
-/* Specific for iPhone 13, 14, and 15 */
-@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-  .container2 {
-    flex-direction: column;
-    /* margin-bottom: 0px; */
-  }
-
-  .counter-numbers {
-    font-size: 30px;
-  }
-
-  .container2 p {
-    font-size: 20px;
-  }
-}
 /* ====================================================== */
 /* Service Section */
 .service-detail-section {
@@ -1786,118 +1766,3 @@ height: 280px;
   border-radius: 5px; /* Optional: Add rounded corners */
 }
 
-
-
-/* service section vdeo==================== */
-.service-service-hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-description {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.hero-button {
-  padding: 1rem 2rem;
-  background-color: #007aff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .hero-title {
-      font-size: 2.5rem;
-  }
-
-  .hero-description {
-      font-size: 1.25rem;
-  }
-
-  .hero-button {
-      font-size: 0.875rem;
-      padding: 0.75rem 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-      font-size: 2rem;
-  }
-
-  .hero-description {
-      font-size: 1rem;
-  }
-
-  .hero-button {
-      font-size: 0.75rem;
-      padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-      font-size: 1.5rem;
-  }
-
-  .hero-description {
-      font-size: 0.875rem;
-  }
-
-  .hero-button {
-      font-size: 0.75rem;
-      padding: 0.5rem 1rem;
-  }
-}
-.audio-toggle {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background-color:var(--second-color);
-  color:white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 10;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-@media only screen and (max-width: 768px) {
-  .audio-toggle {
-      display: block; /* Show the button only on small screens */
-  }
-}
