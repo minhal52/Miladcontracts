@@ -4,27 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Title of the webpage -->
-<title>Milad Constructors</title>
-<!-- Meta description: Brief summary of the page content -->
-<meta name="description" content="Milad Constructors is a leading construction and contracting company in Saudi Arabia and UAE, offering top-notch services in industrial solutions, manpower supply, firefighting systems, and more.">
-<!-- Meta keywords: List of relevant keywords (less common in modern SEO) -->
-<meta name="keywords" content=" MiladConstructors, construction company, industrial solutions, manpower supply, firefighting systems, logistics services, chemical supply,Sewage and Drainage Contracting,Survey Engineering Services,Technical Services, Saudi Arabia, UAE">
-<!-- Author of the webpage -->
-<meta name="author" content="Milad Constructors">
-<!-- Viewport settings for responsive design -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Open Graph meta tags for social media -->
-<meta property="og:title" content="Milad Constructors">
-<meta property="og:description" content="Milad Constructors is a leading construction and contracting company in Saudi Arabia and UAE, offering top-notch services in industrial solutions, manpower supply, firefighting systems, and more.">
-<meta property="og:image" content="assets/img/Miladcompanylogo3.jpg">
-<meta property="og:url" content="https://miladconstruction.com/">
-<meta property="og:type" content="website">
-<!-- Twitter Card meta tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Milad Constructors">
-<meta name="twitter:description" content="Leading construction and contracting company in Saudi Arabia and UAE, offering industrial solutions, manpower supply, firefighting systems, and more.">
-<meta name="twitter:image" content="assets/img/Miladcompanylogo3.jpg">
+    <!-- Title of the webpage -->
+    <title>Milad Constructors</title>
+    <!-- Meta description: Brief summary of the page content -->
+    <meta name="description"
+        content="Milad Constructors is a leading construction and contracting company in Saudi Arabia and UAE, offering top-notch services in industrial solutions, manpower supply, firefighting systems, and more.">
+    <!-- Meta keywords: List of relevant keywords (less common in modern SEO) -->
+    <meta name="keywords"
+        content=" MiladConstructors, construction company, industrial solutions, manpower supply, firefighting systems, logistics services, chemical supply,Sewage and Drainage Contracting,Survey Engineering Services,Technical Services, Saudi Arabia, UAE">
+    <!-- Author of the webpage -->
+    <meta name="author" content="Milad Constructors">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="Milad Constructors">
+    <meta property="og:description"
+        content="Milad Constructors is a leading construction and contracting company in Saudi Arabia and UAE, offering top-notch services in industrial solutions, manpower supply, firefighting systems, and more.">
+    <meta property="og:image" content="assets/img/Miladcompanylogo3.jpg">
+    <meta property="og:url" content="https://miladconstruction.com/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Milad Constructors">
+    <meta name="twitter:description"
+        content="Leading construction and contracting company in Saudi Arabia and UAE, offering industrial solutions, manpower supply, firefighting systems, and more.">
+    <meta name="twitter:image" content="assets/img/Miladcompanylogo3.jpg">
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/Miladcompanylogo1.jpg" type="image/x-icon">
@@ -39,47 +43,159 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
-(function(){
-emailjs.init({
-publicKey: "xSPgeAEQXI2ieTFxZ",
-});
-})();
+    (function () {
+        emailjs.init({
+            publicKey: "xSPgeAEQXI2ieTFxZ",
+        });
+    })();
 </script>
 <style>
-    
+   .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: var(--text-color-light);
+    background-image: url('assets/img/miladworks13.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.hero-text {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    width: 60%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 700;
+}
+
+.hero-logo {
+    position: absolute;
+    top: 90px; /* Adjusted to move logo slightly down for large screens */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 150px;
+    text-align: left;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 767px) {
+    .hero {
+        background-size: cover;
+        background-position: center center;
+        height: auto;
+        width: 100%;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        min-height: 70vh;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+        margin-top: 80px; /* Adjusted for better spacing on mobile */
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-logo {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 80px;
+    }
+}
+
+
 </style>
+
 <body>
     <!--==================== HEADER ====================-->
-        <nav>
-            <ul> <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
-                <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-             
-              <li class="hideOnMobile"><a href="index.html">HOME</a></li>
-              <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
-              <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
-              <li class="hideOnMobile"><a href="contact-us.html">Request a Quote</a></li>
-              <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-            </ul>
-            <ul class="sidebar">
-              <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="ourservices.html">SERVICES</a></li>
-              <li><a href="contact-us.html">Request a Quote</a></li>
-            
-            </ul>
-          </nav>
-          
-          
- 
+    <nav>
+        <ul>
+            <li><a href="#"><img src="assets/img/Miladcompanylogo1.jpg" alt="Logo" class="logo"></a></li>
+            <li class="hideOnMobile" id="hideonmobile"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
+
+            <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="ourservices.html">SERVICE</a></li>
+            <li class="hideOnMobile"><a href="contact-us.html">Request a Quote</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg></a></li>
+        </ul>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="ourservices.html">SERVICES</a></li>
+            <li><a href="contact-us.html">Request a Quote</a></li>
+
+        </ul>
+    </nav>
+
+
+
 
     <!--==================== MAIN ====================-->
     <main class="main">
-       
+
         <!--==================== HOME ====================-->
         <section class="hero">
             <div class="hero-container">
@@ -91,17 +207,17 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                     <img src="assets/img/milad logopng.png" alt="Logo">
                 </div>
             </div>
-            <img class="hero-image" src="assets/img/miladworks13.jpg" alt="Centered Image">
+            <!-- <img class="hero-image" src="assets/img/miladworks13.jpg" alt="Centered Image"> -->
         </section>
-    
-        
+
+
         <!-- ======================================== 
           Our work counter Section Start  
     ========================================  -->
         <section class="section section-work-data">
             <div class="container2 grid grid-two-column">
                 <div>
-                    
+
                     <h2 class="counter-numbers" data-number="36">0+</h2>
                     <p>Industries Served</p>
                 </div>
@@ -115,27 +231,27 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                 </div>
             </div>
         </section>
-<div>
-   
-</div>
+        <div>
 
-    <!--==================== POPULAR / services we offer====================-->
-<section class="service-service-hero-section">
-    <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto">
-        <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
-    </video>
-    
-    <div class="hero-content">
-        <h1 class="hero-title">Welcome to Milad Constructors</h1>
-        <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
-        <a href="ourservices.html" class="hero-button">Explore Our Services</a>
-    </div>
+        </div>
 
-    <!-- Audio Control Button -->
-    <button id="audio-toggle" class="audio-toggle">Unmute</button>
-</section>
+        <!--==================== POPULAR / services we offer====================-->
+        <section class="service-service-hero-section">
+
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Milad Constructors</h1>
+                <p class="hero-description">Providing top-notch services in construction and industrial solutions.</p>
+                <a href="ourservices.html" class="hero-button">Explore Our Services</a>
+            </div>
+            <video id="hero-video" class="hero-video" autoplay muted playsinline preload="auto">
+                <source src="assets/img/miladworksvdeo.mp4" type="video/mp4">
+            </video>
+
+            <!-- Audio Control Button -->
+            <button id="audio-toggle" class="audio-toggle">Unmute</button>
+        </section>
         <!-- swiper container -->
-        
+
         <div class="popular-container swiper">
             <div class="swiper-wrapper">
                 <article class="popular-card swiper-slide">
@@ -163,7 +279,7 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                         </p>
                     </div>
                 </article>
- <article class="popular-card swiper-slide">
+                <article class="popular-card swiper-slide">
                     <img src="assets/img/miladworks6.jpg" alt="service" class="popular-img">
 
                     <div class="popular-data">
@@ -189,8 +305,8 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                         </p>
                     </div>
                 </article>
-                
-           
+
+
                 <article class="popular-card swiper-slide">
                     <img src="assets/img/miladworks12.jpg" alt="service" class="popular-img">
 
@@ -200,7 +316,7 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                         </h2>
                         <h3 class="popular-title"></h3>
                         <p class="popular-description">
-                          Chemical Supply.
+                            Chemical Supply.
                         </p>
                     </div>
                 </article>
@@ -214,37 +330,40 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
             </div>
 
         </div>
-    </div>
-
-</section>
-
-    <!--==================== VALUE ====================-->
-<section class="value section" id="value">
-    <div class="section-heading">
-        <span class="section-subtitle">About Us.</span>
-    </div>
-    <div class="value-container container grid">
-        <div class="value-images">
-            <div class="value-orbe"></div>
-            <div class="value-img">
-                <img src="assets/img/miladaboutimg.jpg" alt="">
-            </div>
         </div>
-        <div class="value-content">
-            <h2 class="section-title">Unlocking Possibilities and Empowering Progress
-                <span>.</span>
-            </h2>
-            <p class="value-description">Milad Constructors and Contractors is a well-established and popular 
-                company with an excellent track record for customer satisfaction. Milad Constructors and Contractors 
-                provides complete solutions for our customers through a wide range of products. We offer customized
-                services and technical support to our esteemed customers. Our commitment to timely delivery,
-                accurate inventory management, technical assistance, and information to keep our customers updated makes us the most preferred partner .</p>
-            <div class="value-item">
-                <button class="button value-button"><a href="about.html">Read More</a></button>
+
+        </section>
+
+        <!--==================== VALUE ====================-->
+        <section class="value section" id="value">
+            <div class="section-heading">
+                <span class="section-subtitle">About Us.</span>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="value-container container grid">
+                <div class="value-images">
+                    <div class="value-orbe"></div>
+                    <div class="value-img">
+                        <img src="assets/img/miladaboutimg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="value-content">
+                    <h2 class="section-title">Unlocking Possibilities and Empowering Progress
+                        <span>.</span>
+                    </h2>
+                    <p class="value-description">Milad Constructors and Contractors is a well-established and popular
+                        company with an excellent track record for customer satisfaction. Milad Constructors and
+                        Contractors
+                        provides complete solutions for our customers through a wide range of products. We offer
+                        customized
+                        services and technical support to our esteemed customers. Our commitment to timely delivery,
+                        accurate inventory management, technical assistance, and information to keep our customers
+                        updated makes us the most preferred partner .</p>
+                    <div class="value-item">
+                        <button class="button value-button"><a href="about.html">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!--==================== CONTACT ====================-->
         <div>
@@ -271,20 +390,20 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                     <form id="contactForm">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
-                        
+
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-                        
+
                         <label for="country">Select Country:</label>
                         <select id="country" name="country" required>
                             <option value=""></option>
                             <option value="Saudi Arabia">Saudi Arabia</option>
                             <option value="UAE">UAE</option>
                         </select>
-                        
+
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-                        
+
                         <button id="button" type="submit" onclick="sendMail()">Request a Quote</button>
                     </form>
                 </div>
@@ -301,8 +420,9 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                     <i class='bx bxs-map'></i>Asma Bint Malik Street, <br>Al Arid Dist. Riyad, KSA
                 </p><br>
                 <p class="footer-description">
-                    <i class='bx bxs-map'></i>Office - 3.030, <br>Maryam Mohammed Ahmed <br> Al Otaiba-Deira-Al Baraha,UAE
-                </p> 
+                    <i class='bx bxs-map'></i>Office - 3.030, <br>Maryam Mohammed Ahmed <br> Al Otaiba-Deira-Al
+                    Baraha,UAE
+                </p>
             </div>
             <div class="footer-content">
                 <div>
@@ -314,7 +434,7 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
                         <li><a href="contact-us.html" class="footer-link">CONTACT</a></li>
                     </ul>
                 </div>
-              
+
             </div>
         </div>
         <div class="footer-info-container">
@@ -331,48 +451,48 @@ publicKey: "xSPgeAEQXI2ieTFxZ",
     </a>
     <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('hero-video');
-    const audioToggle = document.getElementById('audio-toggle');
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('hero-video');
+            const audioToggle = document.getElementById('audio-toggle');
 
-    // Ensure the video plays automatically with audio muted initially
-    if (video) {
-        video.muted = true; // Start with audio muted
-        video.play().catch(error => {
-            console.error('Error playing video:', error);
-        });
+            // Ensure the video plays automatically with audio muted initially
+            if (video) {
+                video.muted = true; // Start with audio muted
+                video.play().catch(error => {
+                    console.error('Error playing video:', error);
+                });
 
-        // Set the initial text of the audio toggle button to "Unmute"
-        if (audioToggle) {
-            audioToggle.textContent = 'Unmute';
-
-            // Handle the mute/unmute functionality
-            audioToggle.addEventListener('click', function() {
-                if (video.muted) {
-                    video.muted = false;
-                    audioToggle.textContent = 'Mute';
-                } else {
-                    video.muted = true;
+                // Set the initial text of the audio toggle button to "Unmute"
+                if (audioToggle) {
                     audioToggle.textContent = 'Unmute';
+
+                    // Handle the mute/unmute functionality
+                    audioToggle.addEventListener('click', function () {
+                        if (video.muted) {
+                            video.muted = false;
+                            audioToggle.textContent = 'Mute';
+                        } else {
+                            video.muted = true;
+                            audioToggle.textContent = 'Unmute';
+                        }
+                    });
+                } else {
+                    console.error('Audio toggle button not found');
                 }
-            });
-        } else {
-            console.error('Audio toggle button not found');
-        }
 
-        // Check if the video is actually playing
-        video.addEventListener('playing', () => {
-            console.log('Video is playing');
-        });
+                // Check if the video is actually playing
+                video.addEventListener('playing', () => {
+                    console.log('Video is playing');
+                });
 
-        // Handle video error
-        video.addEventListener('error', (e) => {
-            console.error('Video error:', e);
+                // Handle video error
+                video.addEventListener('error', (e) => {
+                    console.error('Video error:', e);
+                });
+            } else {
+                console.error('Video element not found');
+            }
         });
-    } else {
-        console.error('Video element not found');
-    }
-});
 
 
 
