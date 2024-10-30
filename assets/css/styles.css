@@ -218,14 +218,16 @@ nav li:first-child {
   display: none;
 }
 
+@media (min-width: 1200px) {
 .logo {
-  height: 40px; /* Adjust height as needed */
+  height: 140px; /* Adjust height as needed */
   width: auto;
   display: flex;
   align-items: center;
   mix-blend-mode: multiply;
+margin-top: -20px;
 }
-
+}
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
@@ -242,6 +244,15 @@ nav li:first-child {
   nav {
     background-color: #f8f9fa; /* Change this color to your desired background color for mobile screens */
   }
+  
+.logo {
+  height: 100px; /* Adjust height as needed */
+  width: auto;
+  display: flex;
+  align-items: center;
+  mix-blend-mode: multiply;
+
+}
 }
 
 /* Active link */
@@ -1008,6 +1019,7 @@ color: var(--second-color);
 }  
 /*=============== FOOTER ===============*/
 /* General styles for the footer */
+
 .footer-container {
   row-gap: 2.5rem;
 }
