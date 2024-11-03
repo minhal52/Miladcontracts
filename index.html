@@ -53,7 +53,7 @@
     })();
 </script>
 <style>
-   .hero {
+  .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +75,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.82); /* Increased opacity */
     z-index: -1;
 }
 
@@ -84,37 +84,49 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     height: auto;
 }
 
 .hero-text {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin: 0;
-    width: 60%;
+    width: 100%;
+    margin-top: 100px;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 5rem; /* Font size for large screens */
     color: #fff;
     line-height: 1.2;
-    margin: 0;
+    margin: 20px 0 0; /* Add margin-top to move the text down */
+    padding: 0; /* Ensure no padding */
     font-weight: 700;
 }
 
 .hero-logo {
     position: absolute;
-    top: 90px; /* Adjusted to move logo slightly down for large screens */
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 150px;
+    max-width: 250px; /* Size for large screens */
     text-align: left;
 }
 
+
+/* Adjustments for small screens */
 /* Adjustments for small screens */
 @media (max-width: 767px) {
+    .hero-logo {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 160px; /* Increased size for mobile screens */
+        margin-bottom: 40px; /* Adjust the value for desired gap below the logo */
+    }
+
     .hero {
         background-size: cover;
         background-position: center center;
@@ -134,25 +146,18 @@
         width: 100%;
         text-align: center;
         margin: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-        margin-top: 80px; /* Adjusted for better spacing on mobile */
+        margin-top: 80px;
     }
 
     .hero-text p {
         font-size: 1rem;
     }
 
-    .hero-logo {
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 80px;
+    .hero-text h1 {
+        font-size: 2.5rem; /* Font size for mobile */
+        margin: 40px 0 0; /* Added margin-top for spacing on mobile */
     }
 }
-
 
 </style>
 
